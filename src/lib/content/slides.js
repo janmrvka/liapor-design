@@ -11,10 +11,10 @@ export const SLIDES = [
     "id": "title",
     "template": "ImageSlide",
     "content": {
-      "image": "/images/kama-outdoor.webp",
+      "image": "/images/slide_liapor-beton.webp",
       "titleLogo": "/logos/logo-liapor.jpg",
       "title": "Liapor",
-      "subtitle": "Aus Ton Natürlich Nachhaltig",
+      "subtitle": "Liapor - východiska pro návrh designu",
       "description": "",
       "stickers": []
     },

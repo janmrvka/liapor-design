@@ -125,11 +125,11 @@ export default function ImageSlide({ content, config = {} }) {
           <div className="max-w-4xl w-full text-center">
             {titleLogo ? (
               <SlideIn direction="up" delay={0.3}>
-                <div className="flex items-center justify-center bg-white backdrop-blur-sm rounded-2xl px-7 py-3 mb-4 md:mb-6 lg:mb-8 mx-auto w-fit">
+                <div className="flex items-center justify-center bg-white rounded-2xl px-8 py-5 mb-4 md:mb-6 lg:mb-8 mx-auto w-fit">
                   <img
                     src={titleLogo}
                     alt={title || 'Logo'}
-                    className="w-[500px] h-auto translate-y-5 -translate-x-[5px]"
+                    className="w-[320px] h-auto"
                   />
                 </div>
               </SlideIn>
@@ -142,7 +142,7 @@ export default function ImageSlide({ content, config = {} }) {
             )}
             {subtitle && (
               <FadeIn delay={0.6}>
-                <p className={`text-2xl md:text-3xl lg:text-4xl ${textColor} opacity-90 font-medium mb-4 md:mb-6`}>
+                <p className={`text-2xl md:text-3xl lg:text-4xl ${textColor} font-medium mb-4 md:mb-6`}>
                   {subtitle}
                 </p>
               </FadeIn>

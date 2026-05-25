@@ -3,22 +3,18 @@ import { EditModeProvider } from '@/contexts/EditModeContext';
 import EditModeIndicator from '@/components/edit/EditModeIndicator';
 
 export const metadata = {
-  title: 'KAMA – návrh kampaní a strategické směry',
+  title: 'Liapor - východiska pro návrh designu',
   description: 'Prezentace digitální agentury (ant)',
+  robots: {
+    index: false,
+    follow: false,
+  },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
     apple: '/favicon.ico',
   },
-  viewport: {
-    width: 1920,
-    initialScale: 1,
-    minimumScale: 0.1,
-    maximumScale: 3,
-    userScalable: true,
-  },
   other: {
-    // Performance hints
     'X-UA-Compatible': 'IE=edge',
   },
 };
