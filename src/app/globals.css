@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Full-screen slides */
+  .slide-container {
+    @apply w-full relative;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    overflow-y: auto; /* Allow vertical scrolling within slide */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Presentation-specific resets */
+  * {
+    @apply box-border;
+  }
+
+  html,
+  body,
+  #__next {
+    @apply h-full overflow-hidden;
+    width: 100%;
+  }
+
+  body {
+    @apply bg-black text-white;
+  }
+
+  /* Smooth font rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Hide scrollbar but keep functionality - for presentation */
+  .presentation-view ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Custom scrollbar for admin */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    display: block;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full hover:bg-gray-400;
+  }
+
+  /* Focus visible for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-ant-green;
+  }
+}
+
+@layer utilities {
+  /* Text gradient effect */
+  .text-gradient-green {
+    @apply bg-gradient-to-r from-ant-green to-ant-blue bg-clip-text text-transparent;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  /* Animated gradient text */
+  .text-animated-gradient {
+    background: linear-gradient(
+      90deg,
+      #5bffc4,
+      #d7edff,
+      #ffe2eb,
+      #5bffc4
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease-in-out infinite;
+  }
+
+  /* Presentation animations */
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
