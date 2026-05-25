@@ -5,10 +5,6 @@
  * Design: Střídání tmavých a světlých slidů, brand stickery, barevné akcenty, fotky
  */
 
-import { CLIENT_CONFIG } from '@/lib/config/client';
-
-const { agency } = CLIENT_CONFIG;
-
 // === SLIDY PREZENTACE ===
 export const SLIDES = [
   {
@@ -16,18 +12,11 @@ export const SLIDES = [
     "template": "ImageSlide",
     "content": {
       "image": "/images/kama-outdoor.webp",
-      "titleLogo": "/logos/kama a slogan-new.png",
-      "title": "KAMA",
-      "subtitle": "KAMA je lovebrand. Má silný příběh.",
-      "description": "Teď je čas na odvahu.",
-      "stickers": [
-        {
-          "image": "/images/wow_je_nase_proc_-_bile-removebg-preview.png",
-          "position": "bottom-right",
-          "rotation": -8,
-          "size": "xl"
-        }
-      ]
+      "titleLogo": "/logos/logo-liapor.jpg",
+      "title": "Liapor",
+      "subtitle": "Aus Ton Natürlich Nachhaltig",
+      "description": "",
+      "stickers": []
     },
     "config": {
       "backgroundColor": "bg-black",
@@ -35,7 +24,7 @@ export const SLIDES = [
       "layout": "overlay",
       "overlayOpacity": 0.7
     },
-    "notes": "Dobrý den. KAMA je legenda. Máme historii, máme kvalitu, máme \"Made in Prague\". Ale byznysově stojíme na jedné noze. Dnes vám ukážeme plán, jak to změnit. Jak z firmy, která prodává 3 měsíce v roce, udělat firmu, která je relevantní 12 měsíců v roce."
+    "notes": ""
   },
   {
     "id": "ant-intro",
