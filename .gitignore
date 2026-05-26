@@ -31,3 +31,4 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+public/images/Showreel_landscape.mp4

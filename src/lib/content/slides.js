@@ -30,7 +30,7 @@ export const SLIDES = [
     "id": "ant-intro",
     "template": "VideoSlide",
     "content": {
-      "video": "/images/Showreel_landscape.mp4"
+      "videoId": "OKChYYsXBbA"
     },
     "config": {
       "backgroundColor": "bg-black",
