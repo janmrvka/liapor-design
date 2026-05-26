@@ -160,7 +160,7 @@ export const SLIDES = [
     "id": "de-desktop-mobil",
     "template": "ImageSlide",
     "content": {
-      "image": "/images/DE desktop - mobil.png",
+      "image": "/images/de-desktop-mobil.png",
       "title": "Desktop / mobil  (DE + AT)",
       "subtitle": ""
     },
@@ -178,7 +178,7 @@ export const SLIDES = [
     "id": "cz-desktop-mobil",
     "template": "ImageSlide",
     "content": {
-      "image": "/images/CZ desktop - mobil.png",
+      "image": "/images/cz-desktop-mobil.png",
       "title": "Desktop / mobil (CZ)",
       "subtitle": ""
     },
@@ -292,7 +292,7 @@ export const SLIDES = [
     "id": "hotjar-analyza-de",
     "template": "ImageSlide",
     "content": {
-      "image": "/images/ukázka analýzy hotjar - DE.png",
+      "image": "/images/hotjar-analyza-de.png",
       "title": "Víme přesně, kam se dívají. A kde odcházejí.",
       "subtitle": "(DE)"
     },
