@@ -14,7 +14,7 @@ export const SLIDES = [
       "image": "/images/slide_liapor-beton.webp",
       "titleLogo": "/logos/logo-liapor.jpg",
       "title": "Liapor",
-      "subtitle": "Liapor - východiska pro návrh designu",
+      "subtitle": "Návrh designu - květen 2026",
       "description": "",
       "stickers": []
     },

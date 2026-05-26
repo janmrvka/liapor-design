@@ -3,7 +3,7 @@ import { EditModeProvider } from '@/contexts/EditModeContext';
 import EditModeIndicator from '@/components/edit/EditModeIndicator';
 
 export const metadata = {
-  title: 'Liapor - východiska pro návrh designu',
+  title: 'Návrh designu - květen 2026',
   description: 'Prezentace digitální agentury (ant)',
   robots: {
     index: false,
