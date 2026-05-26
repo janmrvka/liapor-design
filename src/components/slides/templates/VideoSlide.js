@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useRef, useState, useCallback } from 'react';
 import FadeIn from '@/components/animations/FadeIn';
 import SlideIn from '@/components/animations/SlideIn';
 
@@ -26,10 +27,25 @@ export default function VideoSlide({ content, config = {} }) {
     textColor = 'text-white',
     layout = 'split',
     videoPosition = 'right',
-    videoFit = 'height', // 'height' = fill height (crop sides), 'width' = fill width (crop top/bottom)
+    videoFit = 'height',
   } = config;
 
   const { videoId, video, title, subtitle, description } = content;
+
+  const videoRef = useRef(null);
+  const [paused, setPaused] = useState(false);
+
+  const togglePlay = useCallback(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    if (el.paused) {
+      el.play();
+      setPaused(false);
+    } else {
+      el.pause();
+      setPaused(true);
+    }
+  }, []);
   const bgColor = BG_COLORS[backgroundColor] || '#000000';
   const isVideoLeft = videoPosition === 'left';
 
@@ -74,19 +90,28 @@ export default function VideoSlide({ content, config = {} }) {
             )}
 
             {/* Local video element */}
-            <video
-              src={video}
-              autoPlay
-              loop
-              muted={muted}
-              playsInline
-              preload="metadata"
-              loading="lazy"
-              className="max-w-full max-h-[70vh] object-contain"
-              style={{
-                border: 'none',
-              }}
-            />
+            <div className="relative cursor-pointer" onClick={togglePlay}>
+              <video
+                ref={videoRef}
+                src={video}
+                autoPlay
+                loop
+                muted={muted}
+                playsInline
+                preload="metadata"
+                className="max-w-full max-h-[70vh] object-contain"
+                style={{ border: 'none' }}
+              />
+              {paused && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-black/50 rounded-full p-4">
+                    <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+              )}
+            </div>
           </motion.div>
         </div>
       );
