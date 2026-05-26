@@ -115,7 +115,7 @@ export const SLIDES = [
     "id": "ai-video-demo",
     "template": "ImageSlide",
     "content": {
-      "image": "/images/cílové skupiny.png",
+      "image": "/images/cilove-skupiny.png",
       "title": "",
       "subtitle": ""
     },
