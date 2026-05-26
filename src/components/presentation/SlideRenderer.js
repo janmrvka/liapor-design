@@ -21,6 +21,7 @@ import InstagramSlide from '@/components/slides/templates/InstagramSlide';
 import ImageGallerySlide from '@/components/slides/templates/ImageGallerySlide';
 import CreativeVariantsSlide from '@/components/slides/templates/CreativeVariantsSlide';
 import LinksSlide from '@/components/slides/templates/LinksSlide';
+import TableSlide from '@/components/slides/templates/TableSlide';
 
 // Map template names to components
 const SLIDE_TEMPLATES = {
@@ -46,6 +47,7 @@ const SLIDE_TEMPLATES = {
   ImageGallerySlide,
   CreativeVariantsSlide,
   LinksSlide,
+  TableSlide,
 };
 
 /**
