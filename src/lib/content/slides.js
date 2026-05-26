@@ -35,7 +35,7 @@ export const SLIDES = [
     "config": {
       "backgroundColor": "bg-black",
       "layout": "contain",
-      "muted": false
+      "muted": true
     },
     "notes": "Krátké představení agentury (ant) - kdo jsme a co děláme."
   },
