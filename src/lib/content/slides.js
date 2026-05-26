@@ -137,60 +137,169 @@ export const SLIDES = [
   },
   {
     "id": "product-transformation",
-    "template": "BeforeAfterSlide",
+    "template": "LinksSlide",
     "content": {
-      "title": "Z produktové fotky do lifestyle vizuálu.",
-      "subtitle": "Více obsahu za stejné peníze díky AI.",
-      "beforeImage": "/images/produktova-fotka-pred.png",
-      "afterImage": "/images/ai-po.png",
-      "beforeLabel": "PŘED",
-      "afterLabel": "PO",
-      "sticker": {
-        "name": "WOW",
-        "position": "bottom-right",
-        "rotation": -8
-      }
+      "title": "Základy pro design.",
+      "subtitle": "Není to revoluce, ale evoluce.",
+      "links": [
+        {
+          "label": "Liapor Graphic Standards",
+          "url": "/liapor/Liapor_Graphic_Standards.pdf"
+        }
+      ],
     },
     "config": {
       "backgroundColor": "bg-ant-green",
       "textColor": "text-black",
-      "layout": "horizontal"
+      "accentColor": "text-black"
     },
-    "notes": "Ukázka transformace produktové fotky na AI lifestyle vizuály - foto i video. Z jedné fotky vytvoříme více kontextů. Více obsahu za stejné peníze díky AI."
+    "notes": "Východiska pro návrh designu - brand manuál a grafické standardy Liapor."
   },
   {
     "id": "ai-video-demo",
-    "template": "VideoSlide",
+    "template": "CheckerSlide",
     "content": {
-      "video": "/images/evona-video.mp4",
-      "title": "A stejně tak i video.",
-      "subtitle": "Z produktové fotky do lifestyle videa díky AI."
-    },
-    "config": {
-      "backgroundColor": "bg-black",
-      "layout": "contain",
-      "muted": true
-    },
-    "notes": "Ukázka AI video obsahu vytvořeného z produktové fotky - Evona."
-  },
-  {
-    "id": "ai-video-performance",
-    "template": "BeforeAfterSlide",
-    "content": {
-      "title": "AI videa vs. klasická videa",
-      "subtitle": "Až 5× vyšší engagement při nižších nákladech",
-      "beforeImage": "/images/vysledky1.png",
-      "afterImage": "/images/vysledky2.png",
-      "beforeLabel": "AI VIDEO",
-      "afterLabel": "KLASICKÉ VIDEO"
+      "title": "Široká cílová skupina",
+      "items": [
+        "Architekti a projektanti",
+        "Stavební společnosti",
+        "Obchod",
+        "Výrobci stavebních materiálů",
+        "Výrobci substrátů",
+        "Specializovaní provozovatelé",
+        "Zpracovatelé (Processors)"
+      ],
+      "footer": "Koncoví spotřebitelé. (Jen pro CZ/PL)"
     },
     "config": {
       "backgroundColor": "bg-black",
       "textColor": "text-white",
-      "imageMaxHeight": "35vh",
-      "imagePadding": "p-2"
+      "accentColor": "text-ant-green"
     },
-    "notes": "Porovnání výsledků AI videí vs klasických videí - demonstrace až 3x vyššího engagementu při použití AI obsahu. vysledky1.png = AI VIDEO (nahoře), vysledky2.png = KLASICKÉ VIDEO (dole)."
+    "notes": "Cílové skupiny Liapor."
+  },
+  {
+    "id": "ai-video-performance",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Tržní strategie",
+      "items": [
+        "DE, CH, AT — Model \"Surovina a expertní konzultace\"",
+        "CZ — Product first: Dům jedním tahem, zahradní dlažby, zdivo… Model \"Produkty i surovina\""
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green"
+    },
+    "notes": "Tržní strategie: DE/CH/AT = Application first. CZ = Český závod vyrábí z keramzitu i finální produkty."
+  },
+  {
+    "id": "trocha-analytiky",
+    "template": "HeroSlide",
+    "content": {
+      "title": "Trocha analytiky"
+    },
+    "config": {
+      "backgroundColor": "bg-ant-yellow",
+      "textColor": "text-black",
+      "accentColor": "text-black",
+      "backgroundVariant": "none"
+    },
+    "notes": ""
+  },
+  {
+    "id": "de-desktop-mobil",
+    "template": "ImageSlide",
+    "content": {
+      "image": "/images/DE desktop - mobil.png",
+      "title": "Desktop / mobil  (DE + AT)",
+      "subtitle": ""
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "overlay",
+      "overlayOpacity": 0,
+      "imageScale": 1,
+      "imageOffsetY": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": "cz-desktop-mobil",
+    "template": "ImageSlide",
+    "content": {
+      "image": "/images/CZ desktop - mobil.png",
+      "title": "Desktop / mobil (CZ)",
+      "subtitle": ""
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "overlay",
+      "overlayOpacity": 0,
+      "imageScale": 1,
+      "imageOffsetY": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": "hotjar-analyza-de",
+    "template": "ImageSlide",
+    "content": {
+      "image": "/images/ukázka analýzy hotjar - DE.png",
+      "title": "Víme přesně, kam se dívají. A kde odcházejí.",
+      "subtitle": "(DE)"
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "overlay",
+      "overlayOpacity": 0,
+      "imageScale": 1,
+      "imageOffsetY": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": "rozhovory-zeme",
+    "template": "ManifestoSlide",
+    "content": {
+      "statement": "Mluvili jsme přímo se zástupci zemí.",
+      "subtitle": "DE, AT, CZ — každý trh trápí něco jiného.\nPtali jsme se. Poslechli jsme. Víme, kde to bolí."
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "backgroundVariant": "none"
+    },
+    "notes": ""
+  },
+  {
+    "id": "sumarizace-potreby",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Sumarizace potřeb a závěrů.",
+      "items": [
+        "Co nejvíce jednotný design",
+        "Jednotná stromová struktura",
+        "Lépe a viditelněji prezentovat výhody materiálu",
+        "Lépe a viditelněji prezentovat reference",
+        "Jsme experti — poradíme vám",
+        "Architekti a projektanti: pokročilá sekce ke stažení / dokumentace",
+        "Lepší provázání aplikací, produktů a referencí",
+        "Nezávazná konzultace — sběr leadů + expertní pohled Liaporu",
+        "Zelená firma"
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green"
+    },
+    "notes": ""
   },
   {
     "id": "ai-influencer-demo",
