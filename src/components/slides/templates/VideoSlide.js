@@ -33,7 +33,7 @@ export default function VideoSlide({ content, config = {} }) {
   const { videoId, video, title, subtitle, description } = content;
 
   const videoRef = useRef(null);
-  const [paused, setPaused] = useState(false);
+  const [paused, setPaused] = useState(true);
 
   const togglePlay = useCallback(() => {
     const el = videoRef.current;
@@ -119,24 +119,40 @@ export default function VideoSlide({ content, config = {} }) {
     // YouTube video
     return (
       <div className={`min-h-screen relative overflow-hidden ${backgroundColor} flex items-center justify-center`}>
-        <motion.div
-          className="relative w-full h-full flex items-center justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-        >
-          <iframe
-            src={embedUrl}
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            className="w-full h-screen"
-            style={{
-              border: 'none',
-              maxWidth: '177.78vh', // 16:9 aspect ratio
-              maxHeight: '56.25vw', // 16:9 aspect ratio
-            }}
-          />
-        </motion.div>
+        {!paused ? (
+          <motion.div
+            className="relative w-full h-full flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
+            <iframe
+              src={embedUrl}
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              className="w-full h-screen"
+              style={{
+                border: 'none',
+                maxWidth: '177.78vh',
+                maxHeight: '56.25vw',
+              }}
+            />
+          </motion.div>
+        ) : (
+          <motion.div
+            className="flex flex-col items-center justify-center gap-8 cursor-pointer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            onClick={() => setPaused(false)}
+          >
+            <div className="w-24 h-24 rounded-full bg-white/10 border-2 border-white/40 flex items-center justify-center hover:bg-white/20 transition-colors">
+              <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            <p className="text-white/60 text-lg">Kliknutím spustíte video se zvukem</p>
+          </motion.div>
+        )}
       </div>
     );
   }
