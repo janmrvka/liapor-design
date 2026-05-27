@@ -140,17 +140,27 @@ export default function VideoSlide({ content, config = {} }) {
           </motion.div>
         ) : (
           <motion.div
-            className="flex flex-col items-center justify-center gap-8 cursor-pointer"
+            className="relative w-full h-full flex items-center justify-center cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             onClick={() => setPaused(false)}
           >
-            <div className="w-24 h-24 rounded-full bg-white/10 border-2 border-white/40 flex items-center justify-center hover:bg-white/20 transition-colors">
-              <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
+            {/* YouTube thumbnail */}
+            <img
+              src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+              alt="Video thumbnail"
+              className="w-full h-screen object-cover"
+              style={{ maxWidth: '177.78vh', maxHeight: '56.25vw' }}
+            />
+            {/* Play overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 bg-black/30">
+              <div className="w-24 h-24 rounded-full bg-black/60 border-2 border-white/60 flex items-center justify-center hover:bg-black/80 transition-colors">
+                <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <p className="text-white/80 text-lg">Kliknutím spustíte video se zvukem</p>
             </div>
-            <p className="text-white/60 text-lg">Kliknutím spustíte video se zvukem</p>
           </motion.div>
         )}
       </div>
