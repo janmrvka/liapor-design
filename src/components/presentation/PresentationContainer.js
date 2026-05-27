@@ -46,7 +46,7 @@ export default function PresentationContainer() {
     const params = new URLSearchParams(window.location.search);
     const slideParam = params.get('slide');
     if (slideParam !== null) {
-      const slideIndex = parseInt(slideParam, 10);
+      const slideIndex = parseInt(slideParam, 10) - 1;
       if (!isNaN(slideIndex) && slideIndex >= 0 && slideIndex < totalSlides) {
         setCurrentSlide(slideIndex);
       }
@@ -71,6 +71,13 @@ export default function PresentationContainer() {
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
+
+  // Update URL when slide changes
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    url.searchParams.set('slide', currentSlide + 1);
+    window.history.replaceState(null, '', url.toString());
+  }, [currentSlide]);
 
   // Navigate to specific slide (with bounds checking)
   const goToSlide = (index) => {
