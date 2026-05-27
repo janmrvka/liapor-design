@@ -670,7 +670,7 @@ export const SLIDES = [
     "content": {
       "title": "Typická trasa uživatele (CZ).",
       "image": "/images/cztrasa.png",
-      "description": "Produkt → kontakt na stránce\nProdukt → kontakt (stávající zákazník)\nProdukt → kalkulátor\nProdukt → ke stažení"
+      "description": "Úvod → produkty → …\nAplikace → aplikace → …\nProdukt → kontakt na stránce\nProdukt → kontakt (stávající zákazník)\nProdukt → kalkulátor\nProdukt → ke stažení"
     },
     "config": {
       "backgroundColor": "bg-black",
