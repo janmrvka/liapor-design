@@ -92,6 +92,77 @@ export const SLIDES = [
     "notes": "Přechod k případovým studiím - ukážeme konkrétní výsledky naší práce."
   },
   {
+    "id": "co-jsme-zkoumali",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Co jsme zkoumali.",
+      "items": [
+        "Trh a jeho geografická specifika — CZ a DACH",
+        "Zákazníky a jejich rozdílné potřeby",
+        "Konkurenci a stav odvětví",
+        "Stávající brand a jeho limity",
+        "Audit SEO/GEO — jak jsme dohledatelní pro zákazníky",
+        "UX audit — jak se zákazníci chovají a kde se ztrácejí",
+        "Technologické potřeby řešení (CMS) a správa obsahu"
+      ],
+      "footer": "Každé strategické i designové rozhodnutí v tomto projektu stojí na datech a reálném poznání — ne na dojmech.",
+      "highlightFooter": true
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": ""
+  },
+  {
+    "id": "ai-video-performance",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Tržní strategie.",
+      "items": [
+        "DE, CH, AT — surovina + expertní konzultace (98 % B2B)",
+        "CZ — hotové produkty: Dům jedním tahem, dlažby Liastone, zdivo + surovina (B2B + B2C)"
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": "Tržní strategie: DE/CH/AT = Application first. CZ = Český závod vyrábí z keramzitu i finální produkty."
+  },
+  {
+    "id": "segmenty-zakazniku",
+    "template": "TableSlide",
+    "content": {
+      "title": "Segmenty zákazníků.",
+      "columns": ["Segment", "Kdo to je", "Proč přichází na web"],
+      "rows": [
+        ["S1 Výrobci stavebních hmot", "Firmy zpracovávající Liapor jako surovinu", "EPD, technické specifikace, certifikáty, DoP, podklady pro výběrová řízení"],
+        ["S2 Obchod / Distributoři", "Velkoobchod, distributoři", "Informace o produktech, logistice a podmínkách spolupráce"],
+        ["S3 Projektanti a architekti", "Navrhují stavby a specifikují materiály", "Technické podklady, BIM data, reference projektů"],
+        ["S4 Stavební společnosti", "Realizují stavby", "Rychlé odpovědi, dostupnost produktů, návody na aplikaci"],
+        ["S5 Zpracovatelé", "Provádějí aplikaci Liaporu přímo na stavbě", "Technologické postupy, aplikační listy"],
+        ["S6 Speciální aplikace", "Průmyslové, infrastrukturní projekty", "Specifická řešení pro nestandardní použití"],
+        ["S7 B2C", "Stavebníci, svépomocní stavitelé", "Srozumitelné vysvětlení, kde a jak produkt použít"],
+        ["S8 Investoři / Developeři", "Rozhodují o materiálech na úrovni projektů", "Důvěryhodnost značky, reference, udržitelnost"]
+      ],
+      "footer": "Každá skupina hledá jiné informace, jiným způsobem a v jiné fázi rozhodování. Web musí tuto různorodost zvládnout — bez toho, aby působil chaoticky.",
+      "link": {
+        "label": "Celá analýza segmentů",
+        "url": "https://docs.google.com/document/d/1n7M-UDf7cfocBSNMm-K4rZQKUicPqUglOxugfpAgkDA/edit?tab=t.0"
+      }
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white"
+    },
+    "notes": "Segmenty zákazníků Liapor — každý segment hledá jiné informace."
+  },
+  {
     "id": "product-transformation",
     "template": "LinksSlide",
     "content": {
@@ -127,20 +198,6 @@ export const SLIDES = [
       "imageScale": 1
     },
     "notes": "Cílové skupiny Liapor."
-  },
-  {
-    "id": "ai-video-performance",
-    "template": "ManifestoSlide",
-    "content": {
-      "statement": "Jeden materiál.\nDvě strategie.",
-      "subtitle": "DE, CH, AT — surovina + expertní konzultace.\nCZ — hotové produkty: dům jedním tahem, dlažby, zdivo."
-    },
-    "config": {
-      "backgroundColor": "bg-black",
-      "textColor": "text-white",
-      "backgroundVariant": "none"
-    },
-    "notes": "Tržní strategie: DE/CH/AT = Application first. CZ = Český závod vyrábí z keramzitu i finální produkty."
   },
   {
     "id": "trocha-analytiky",

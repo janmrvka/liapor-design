@@ -15,6 +15,7 @@ export default function CheckerSlide({ slide, content, config = {} }) {
     backgroundColor = 'bg-black',
     textColor = 'text-white',
     accentColor = 'text-ant-green',
+    accentLine = false,
   } = config;
 
   const { title, subtitle, items, footer, highlightFooter } = content;
@@ -47,12 +48,17 @@ export default function CheckerSlide({ slide, content, config = {} }) {
             path="content.title"
             value={title}
             as="h1"
-            className={`text-3xl md:text-5xl lg:text-6xl font-bold ${textColor} mb-2 md:mb-4 lg:mb-6`}
+            className={`text-5xl md:text-7xl lg:text-8xl font-bold ${textColor} mb-2 md:mb-4 lg:mb-6`}
           >
             <TextReveal delay={0.2} staggerDelay={0.1}>
               {title}
             </TextReveal>
           </EditableText>
+        )}
+
+        {/* Accent line below title */}
+        {accentLine && (
+          <div className={`w-16 md:w-24 lg:w-32 h-0.5 md:h-1 ${isDark ? 'bg-ant-green' : 'bg-black'} mx-auto mt-4 mb-6 md:mb-8 lg:mb-10 rounded-full`} />
         )}
 
         {/* Subtitle */}
@@ -75,7 +81,7 @@ export default function CheckerSlide({ slide, content, config = {} }) {
           <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 lg:mb-8">
             {items.map((item, index) => (
               <FadeIn key={index} delay={0.7 + index * 0.15}>
-                <p className={`text-xl md:text-3xl lg:text-4xl ${accentColor} font-semibold`}>
+                <p className={`text-xl md:text-3xl lg:text-4xl ${textColor} font-semibold`}>
                   {item}
                 </p>
               </FadeIn>
@@ -93,23 +99,16 @@ export default function CheckerSlide({ slide, content, config = {} }) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.6, duration: 0.8 }}
               >
-                {/* Animated border glow */}
                 <motion.div
-                  className="absolute inset-0 rounded-xl border-3 border-black"
+                  className={`absolute inset-0 rounded-xl border ${isDark ? 'border-ant-green' : 'border-black'}`}
                   animate={{
-                    boxShadow: [
-                      '0 0 15px rgba(0,0,0,0.3)',
-                      '0 0 30px rgba(0,0,0,0.5)',
-                      '0 0 15px rgba(0,0,0,0.3)',
-                    ],
+                    boxShadow: isDark
+                      ? ['0 0 15px rgba(91,255,196,0.2)', '0 0 30px rgba(91,255,196,0.4)', '0 0 15px rgba(91,255,196,0.2)']
+                      : ['0 0 15px rgba(0,0,0,0.2)', '0 0 30px rgba(0,0,0,0.4)', '0 0 15px rgba(0,0,0,0.2)'],
                   }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 />
-                <p className="relative text-lg md:text-xl lg:text-2xl font-black px-4 md:px-5 lg:px-8 py-2 md:py-3 lg:py-4 text-black bg-white rounded-xl">
+                <p className={`relative text-lg md:text-xl lg:text-2xl font-semibold px-4 md:px-5 lg:px-8 py-2 md:py-3 lg:py-4 ${textColor} rounded-xl`}>
                   {footer}
                 </p>
               </motion.div>
