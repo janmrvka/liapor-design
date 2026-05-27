@@ -68,3 +68,9 @@ public/images/vysledky*.png
 public/images/vyzvy.webp
 public/images/zoot.png
 public/images/produktova-fotka-pred.png
+
+# Soubory s diakritikou/mezerami — použijte ASCII verze
+public/images/CZ desktop - mobil.png
+public/images/DE desktop - mobil.png
+public/images/cílové skupiny.png
+public/images/ukázka analýzy hotjar - DE.png
