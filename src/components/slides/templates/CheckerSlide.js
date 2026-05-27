@@ -18,7 +18,7 @@ export default function CheckerSlide({ slide, content, config = {} }) {
     accentLine = false,
   } = config;
 
-  const { title, subtitle, items, footer, highlightFooter } = content;
+  const { title, subtitle, items, footer, highlightFooter, links, featuredLink } = content;
 
   const isDark = backgroundColor?.includes('black');
 
@@ -48,7 +48,7 @@ export default function CheckerSlide({ slide, content, config = {} }) {
             path="content.title"
             value={title}
             as="h1"
-            className={`text-5xl md:text-7xl lg:text-8xl font-bold ${textColor} mb-2 md:mb-4 lg:mb-6`}
+            className={`text-5xl md:text-7xl lg:text-8xl font-bold ${textColor} mb-2 md:mb-4 lg:mb-6 whitespace-pre-line`}
           >
             <TextReveal delay={0.2} staggerDelay={0.1}>
               {title}
@@ -69,7 +69,7 @@ export default function CheckerSlide({ slide, content, config = {} }) {
               path="content.subtitle"
               value={subtitle}
               as="p"
-              className={`text-xl md:text-3xl lg:text-4xl ${textColor} opacity-70 mb-6 md:mb-10 lg:mb-14`}
+              className={`text-xl md:text-3xl lg:text-4xl ${textColor} opacity-80 mb-6 md:mb-10 lg:mb-14`}
             >
               {subtitle}
             </EditableText>
@@ -85,7 +85,7 @@ export default function CheckerSlide({ slide, content, config = {} }) {
                   {item.includes(' — ') ? (
                     <>
                       <span className={textColor}>{item.split(' — ')[0]}</span>
-                      <span className={`${textColor} opacity-40`}> — {item.split(' — ').slice(1).join(' — ')}</span>
+                      <span className={`${textColor} opacity-55`}> — {item.split(' — ').slice(1).join(' — ')}</span>
                     </>
                   ) : (
                     <span className={textColor}>{item}</span>
@@ -94,6 +94,39 @@ export default function CheckerSlide({ slide, content, config = {} }) {
               </FadeIn>
             ))}
           </div>
+        )}
+
+        {/* Featured link */}
+        {featuredLink && (
+          <FadeIn delay={1.1}>
+            <a
+              href={featuredLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-flex items-center gap-3 mt-4 mb-3 px-6 py-3 rounded-xl border-2 ${isDark ? 'border-ant-green text-ant-green' : 'border-black text-black'} text-xl md:text-2xl font-bold hover:opacity-70 transition-opacity`}
+            >
+              ↗ {featuredLink.label}
+            </a>
+          </FadeIn>
+        )}
+
+        {/* Links */}
+        {links && links.length > 0 && (
+          <FadeIn delay={1.2}>
+            <div className="flex flex-wrap justify-center gap-4 mt-4 mb-4">
+              {links.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-ant-green text-base md:text-lg font-medium hover:opacity-70 transition-opacity"
+                >
+                  ↗ {link.label}
+                </a>
+              ))}
+            </div>
+          </FadeIn>
         )}
 
         {/* Footer/Closing statement */}

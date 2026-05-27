@@ -33,14 +33,15 @@ export default function ImageSlide({ content, config = {} }) {
         <div className="text-center mb-4 md:mb-6">
           {title && (
             <FadeIn delay={0.2}>
-              <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold ${textColor} mb-3 md:mb-4`}>
+              <h2 className={`text-5xl md:text-7xl lg:text-8xl font-bold ${textColor} mb-2 md:mb-4`}>
                 {title}
               </h2>
+              <div className={`w-16 md:w-24 lg:w-32 h-0.5 md:h-1 bg-ant-green mb-4 md:mb-6 rounded-full mx-auto`} />
             </FadeIn>
           )}
           {subtitle && (
             <FadeIn delay={0.4}>
-              <p className={`text-lg md:text-xl lg:text-2xl ${textColor} opacity-80`}>
+              <p className={`text-xl md:text-2xl lg:text-3xl ${textColor} opacity-70`}>
                 {subtitle}
               </p>
             </FadeIn>
@@ -49,17 +50,17 @@ export default function ImageSlide({ content, config = {} }) {
 
         {/* Image below - max width, contained */}
         <motion.div
-          className="flex-1 flex items-start justify-center overflow-hidden relative"
+          className="flex-1 flex items-center justify-center overflow-hidden relative"
           style={{ marginTop: `${imageOffsetY}px` }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
         >
-          <div className="relative max-w-full max-h-[80vh]" style={{ transform: `scale(${imageScale})` }}>
+          <div className="relative" style={{ transform: `scale(${imageScale})` }}>
             <img
               src={image}
               alt={title || 'Slide image'}
-              className="max-w-full max-h-[80vh] w-auto object-contain"
+              className="max-w-full max-h-[55vh] w-auto object-contain"
               loading="eager"
               style={{
                 clipPath: 'inset(2px 5px 5px 2px)',
@@ -234,6 +235,60 @@ export default function ImageSlide({ content, config = {} }) {
             )}
           </div>
         </div>
+      </div>
+    );
+  }
+
+  // Compare layout - two images side by side
+  if (layout === 'compare') {
+    const { images } = content;
+    return (
+      <div className={`min-h-screen flex flex-col ${backgroundColor} px-8 md:px-16 py-8 md:py-10`}>
+        {title && (
+          <FadeIn delay={0.2}>
+            <h2 className={`text-5xl md:text-7xl lg:text-8xl font-bold ${textColor} mb-2 md:mb-4 text-center`}>
+              {title}
+            </h2>
+            <div className="w-16 md:w-24 lg:w-32 h-0.5 md:h-1 bg-ant-green mb-6 md:mb-8 rounded-full mx-auto" />
+          </FadeIn>
+        )}
+        <div className="flex-1 grid grid-cols-2 gap-6 md:gap-10">
+          {images && images.map((img, i) => (
+            <motion.div
+              key={i}
+              className="flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 + i * 0.15, ease: 'easeOut' }}
+            >
+              {img.label && (
+                <p className={`text-lg md:text-xl lg:text-2xl font-semibold ${textColor} mb-3 text-center`}>
+                  {img.label}
+                </p>
+              )}
+              <div className="flex-1 flex items-center justify-center">
+                <img
+                  src={img.src}
+                  alt={img.label || ''}
+                  className="max-w-full max-h-[52vh] w-auto object-contain"
+                  loading="eager"
+                />
+              </div>
+              {img.note && (
+                <p className={`text-base md:text-lg lg:text-xl ${textColor} opacity-70 mt-3 text-center`}>
+                  {img.note}
+                </p>
+              )}
+            </motion.div>
+          ))}
+        </div>
+        {content.note && (
+          <FadeIn delay={0.8}>
+            <p className={`text-xl md:text-2xl lg:text-3xl font-bold ${textColor} mt-6 text-center`}>
+              {content.note}
+            </p>
+          </FadeIn>
+        )}
       </div>
     );
   }

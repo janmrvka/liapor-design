@@ -23,15 +23,15 @@ export default function TableSlide({ content, config = {} }) {
     <div className={`min-h-screen flex flex-col justify-center px-16 md:px-24 py-10 ${backgroundColor}`}>
       {title && (
         <FadeIn delay={0.1}>
-          <h2 className={`text-5xl md:text-7xl lg:text-8xl font-bold ${textColor} mb-4`}>
+          <h2 className={`text-5xl md:text-7xl lg:text-8xl font-bold ${textColor} mb-4 text-center`}>
             {title}
           </h2>
-          <div className="w-16 md:w-24 lg:w-32 h-0.5 md:h-1 bg-ant-green mb-6 md:mb-8 rounded-full" />
+          <div className="w-16 md:w-24 lg:w-32 h-0.5 md:h-1 bg-ant-green mb-6 md:mb-8 rounded-full mx-auto" />
         </FadeIn>
       )}
       {subtitle && (
         <FadeIn delay={0.2}>
-          <p className={`text-xl md:text-2xl ${textColor} opacity-60 mb-6`}>
+          <p className={`text-xl md:text-2xl ${textColor} opacity-75 mb-6 text-center`}>
             {subtitle}
           </p>
         </FadeIn>
@@ -50,7 +50,7 @@ export default function TableSlide({ content, config = {} }) {
                 {columns.map((col, i) => (
                   <th
                     key={i}
-                    className={`text-left py-3 px-3 border-b border-white/20 ${textColor} opacity-50 font-semibold uppercase tracking-wider text-sm md:text-base`}
+                    className={`text-left py-3 px-3 border-b border-white/20 ${textColor} opacity-65 font-semibold uppercase tracking-wider text-sm md:text-base`}
                   >
                     {col}
                   </th>
@@ -69,7 +69,7 @@ export default function TableSlide({ content, config = {} }) {
                   {row.map((cell, ci) => (
                     <td
                       key={ci}
-                      className={`py-3 px-3 text-lg md:text-xl lg:text-2xl ${textColor} ${ci === 0 ? 'font-bold text-ant-green whitespace-nowrap' : 'font-medium opacity-90'}`}
+                      className={`py-3 px-3 text-lg md:text-xl lg:text-2xl ${textColor} ${ci === 0 ? 'font-bold text-ant-green whitespace-nowrap' : ci === 1 ? 'font-medium opacity-90 truncate max-w-0' : 'font-medium opacity-90'}`}
                     >
                       {cell}
                     </td>

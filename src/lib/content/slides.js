@@ -77,11 +77,11 @@ export const SLIDES = [
     "notes": "Reference agentury (ant) - rozšířený seznam klientů s logy. Bílé pozadí pro lepší viditelnost log."
   },
   {
-    "id": "case-studies-intro",
+    "id": "dnesni-agenda",
     "template": "HeroSlide",
     "content": {
-      "title": "Základy projektu.",
-      "subtitle": "Co jsme dostali. Co jsme zjistili. Z čeho vycházíme."
+      "title": "Dnešní agenda.",
+      "subtitle": "Co nás čeká."
     },
     "config": {
       "backgroundColor": "bg-ant-yellow",
@@ -89,7 +89,7 @@ export const SLIDES = [
       "accentColor": "text-black",
       "backgroundVariant": "none"
     },
-    "notes": "Přechod k případovým studiím - ukážeme konkrétní výsledky naší práce."
+    "notes": ""
   },
   {
     "id": "co-jsme-zkoumali",
@@ -117,6 +117,21 @@ export const SLIDES = [
     "notes": ""
   },
   {
+    "id": "case-studies-intro",
+    "template": "HeroSlide",
+    "content": {
+      "title": "Základy projektu.",
+      "subtitle": "Co jsme dostali. Co jsme zjistili. Z čeho vycházíme."
+    },
+    "config": {
+      "backgroundColor": "bg-ant-yellow",
+      "textColor": "text-black",
+      "accentColor": "text-black",
+      "backgroundVariant": "none"
+    },
+    "notes": "Přechod k případovým studiím - ukážeme konkrétní výsledky naší práce."
+  },
+  {
     "id": "ai-video-performance",
     "template": "CheckerSlide",
     "content": {
@@ -133,6 +148,23 @@ export const SLIDES = [
       "accentLine": true
     },
     "notes": "Tržní strategie: DE/CH/AT = Application first. CZ = Český závod vyrábí z keramzitu i finální produkty."
+  },
+  {
+    "id": "cilove-skupiny",
+    "template": "ImageSlide",
+    "content": {
+      "title": "Cílové skupiny.",
+      "image": "/images/cilovky.png"
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "overlay",
+      "overlayOpacity": 0,
+      "imageScale": 1,
+      "imageOffsetY": 0
+    },
+    "notes": ""
   },
   {
     "id": "segmenty-zakazniku",
@@ -163,11 +195,114 @@ export const SLIDES = [
     "notes": "Segmenty zákazníků Liapor — každý segment hledá jiné informace."
   },
   {
+    "id": "konkurencni-prostredi",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Kde hrajeme a s kým.",
+      "subtitle": "Trhy se liší — stejně jako naši konkurenti.",
+      "items": [
+        "CZ — nejsilnější pozice. Konkurence omezená, přirozený náskok. Hlavní hrozba: nízká digitální viditelnost vlastní značky.",
+        "DE + CH — silnější hřiště. Hlavní soupeř Leca (Saint-Gobain): globální hráč, silný brand, propracovaná digitální přítomnost. Seramis předbíhá ve speciálních aplikacích.",
+        "Všude ztrácíme stejně — produkt je srovnatelný nebo lepší. Prohráváme na viditelnosti v Google a zejména v AI vyhledávačích."
+      ],
+      "footer": "Neřešíme produktový problém. Řešíme to, že zákazník nás nenajde dřív, než najde konkurenci.",
+      "highlightFooter": true
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": "Konkurenční prostředí — CZ vs DE/CH, hlavní hrozba je viditelnost, ne produkt."
+  },
+  {
+    "id": "audit-zacali-daty",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Dobrý web nestačí. Musí být i nalezitelný.",
+      "subtitle": "Než jsme navrhli jedinou stránku, potřebovali jsme data.",
+      "items": [
+        "Kde jsme? — Reálný stav viditelnosti v Google a AI vyhledávačích",
+        "Kde jsou zákazníci? — Co a jak hledají napříč třemi trhy",
+        "Jak to postavit? — Jaká struktura webu přinese největší návratnost"
+      ],
+      "footer": "Výsledek není dokument. Je to základ pro stavbu webu.",
+      "highlightFooter": true
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": ""
+  },
+  {
+    "id": "proc-ux-audit",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Víme přesně, co zákazníky zajímá. A co je zdrží.",
+      "subtitle": "UX audit odhalil, kde uživatelé odcházejí — a proč.",
+      "items": [
+        "Co je zajímá — a kde to na webu nenacházejí",
+        "Kde se ztrácejí — stránky, ze kterých odcházejí bez akce",
+        "Co je zbytečné — obsah, který nikdo nečte a jen přidává hluk"
+      ],
+      "footer": "Každé rozhodnutí o struktuře webu stojí na reálném chování — ne na dojmu.",
+      "highlightFooter": true
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": ""
+  },
+  {
+    "id": "proc-brand-audit",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Brand. Emoce rozhodují. Až pak přichází logika.",
+      "subtitle": "Zákazník si vybere značku, které věří — a teprve pak hledá důvody.",
+      "items": [],
+      "highlightFooter": false
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": ""
+  },
+  {
+    "id": "web-ktery-nezestarne",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Technologie. Web, který zítra nezestárne.",
+      "subtitle": "Technologie se mění rychleji než cykly redesignu.",
+      "items": [
+        "AI přebírá roli vyhledávače — web musí být čitelný pro stroje i lidi",
+        "Špatná technologická volba dnes znamená drahý redesign za tři roky"
+      ],
+      "highlightFooter": false
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": ""
+  },
+  {
     "id": "delici-seo-geo",
     "template": "HeroSlide",
     "content": {
       "title": "Nalezitelnost.",
-      "subtitle": "SEO/GEO a obsah jako strategický nástroj růstu."
+      "subtitle": "SEO/GEO audit. Struktura a obsah jako strategický nástroj růstu."
     },
     "config": {
       "backgroundColor": "bg-ant-yellow",
@@ -186,8 +321,7 @@ export const SLIDES = [
       "items": [
         "AI přebírá roli prvního poradce — ChatGPT, Gemini, Perplexity doporučují to, co znají. Liapor zatím neznají.",
         "Zákazník si nejdřív hledá řešení online — rozhodnutí padne ještě před prvním kontaktem",
-        "Google i AI upřednostňují autoritu — obsah, ne jen produkty",
-        "Teď se láme chleba. Kdo začne dříve, bude mít náskok."
+        "Google i AI upřednostňují autoritu — obsah, ne jen produkty"
       ],
       "footer": "SEO/GEO není technikálie — je to strategický kanál pro akvizici zákazníků.",
       "highlightFooter": true
@@ -246,14 +380,53 @@ export const SLIDES = [
     "notes": "Příležitosti identifikované SEO auditem."
   },
   {
+    "id": "co-jsme-dodali",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Co jsme dodali.",
+      "subtitle": "Tři trhy. Tři struktury. Strategie pro tvorbu obsahu na minimálně 2 roky dopředu.",
+      "items": [
+        "Analýza klíčových slov — 4 485 slov napříč CZ, DE a CH. Clustery, záměry hledání, sezónnost, konkurenční pozice.",
+        "Architektura webu — ~250 stránek pro liapor.cz, liapor.de a liapor.ch. URL struktura, interní prolinkování a nová pojmenování stránek — srozumitelná pro zákazníka i pro AI."
+      ],
+      "featuredLink": {
+        "label": "Draft struktury webu CZ/DE",
+        "url": "https://film-steel-15619116.figma.site/de"
+      },
+      "links": [
+        {
+          "label": "Stromová struktura CZ",
+          "url": "https://docs.google.com/spreadsheets/d/1nFBQiMwo7EQVg2nmKHVnaXYEq001IF0Lmw-s6aIYa6Q/edit?gid=2095026485#gid=2095026485"
+        },
+        {
+          "label": "Stromová struktura DE / CH",
+          "url": "https://docs.google.com/spreadsheets/d/1moTGzGxCX_g2TQ3SWCJPAj53ErXks-Re/edit?gid=184560933#gid=184560933"
+        }
+      ],
+      "highlightFooter": false
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": ""
+  },
+  {
     "id": "seo-dalsi-kroky",
     "template": "ManifestoSlide",
     "content": {
       "statement": "Domluvit se na jednotném průniku stromové struktury.",
-      "subtitle": "Každá země si pak zapne svoje potřebné.\n\nVidíte nějaké blockery?"
+      "subtitle": "Každá země si pak zapne svoje potřebné.\n\nVidíte nějaké blockery?",
+      "sticker": {
+        "name": "HOW",
+        "position": "top-right",
+        "rotation": 12
+      }
     },
     "config": {
-      "backgroundColor": "bg-ant-yellow",
+      "backgroundColor": "bg-ant-brown",
       "textColor": "text-black",
       "backgroundVariant": "none"
     },
@@ -335,7 +508,8 @@ export const SLIDES = [
     "id": "trocha-analytiky",
     "template": "HeroSlide",
     "content": {
-      "title": "Trocha analytiky"
+      "title": "UX audit.",
+      "subtitle": "Víme přesně, kde zákazníci odcházejí — a proč."
     },
     "config": {
       "backgroundColor": "bg-ant-yellow",
@@ -346,30 +520,85 @@ export const SLIDES = [
     "notes": ""
   },
   {
-    "id": "de-desktop-mobil",
-    "template": "ImageSlide",
+    "id": "design-z-dat",
+    "template": "CheckerSlide",
     "content": {
-      "image": "/images/de-desktop-mobil.png",
-      "title": "Desktop / mobil  (DE + AT)",
-      "subtitle": ""
+      "title": "Design z dat,\nne z dojmů.",
+      "subtitle": "Nový web stavíme na tom, jak se zákazníci skutečně chovají.",
+      "items": [
+        "Analytika — co funguje, co ne, kde se ztrácí pozornost",
+        "Heatmapy — kam se kliká, co se ignoruje",
+        "Session recordings — reálné chování uživatelů krok za krokem"
+      ]
     },
     "config": {
       "backgroundColor": "bg-black",
       "textColor": "text-white",
-      "layout": "overlay",
-      "overlayOpacity": 0,
-      "imageScale": 1,
-      "imageOffsetY": 20
+      "accentColor": "text-ant-green",
+      "accentLine": true
     },
     "notes": ""
   },
   {
-    "id": "cz-desktop-mobil",
+    "id": "desktop-mobil-porovnani",
     "template": "ImageSlide",
     "content": {
-      "image": "/images/cz-desktop-mobil.png",
-      "title": "Desktop / mobil (CZ)",
-      "subtitle": ""
+      "title": "Desktop vs. mobil.",
+      "images": [
+        { "src": "/images/de-desktop-mobil.png", "label": "DE + AT", "note": "Výrazně vyšší podíl desktopu — B2B cílovka pracující u počítače." },
+        { "src": "/images/cz-desktop-mobil.png", "label": "CZ", "note": "Vyšší podíl mobilu — silnější B2C segment a přímí spotřebitelé." }
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "compare"
+    },
+    "notes": ""
+  },
+  {
+    "id": "broken-shop-link",
+    "template": "ImageSlide",
+    "content": {
+      "title": "Nefunkční odkaz na e-shop na švýcarském webu.",
+      "images": [
+        { "src": "/images/broken-link-1.png", "label": "" },
+        { "src": "/images/broken-link-2.png", "label": "" }
+      ],
+      "note": "⚠️ Teď funkční."
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "compare"
+    },
+    "notes": ""
+  },
+  {
+    "id": "drop-off-reference",
+    "template": "ImageSlide",
+    "content": {
+      "title": "Zákazníci odcházejí před klíčovým obsahem.",
+      "images": [
+        { "src": "/images/chyba-2.png", "label": "" },
+        { "src": "/images/chyba-3.png", "label": "" }
+      ],
+      "note": "Míra opuštění klesá z 85 % na 46 % v sekcích referencí produktů."
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "compare"
+    },
+    "notes": ""
+  },
+  {
+    "id": "novinky",
+    "template": "ImageSlide",
+    "content": {
+      "title": "Novinky.",
+      "image": "/images/novinky.png",
+      "subtitle": "Rozhodli jsme se novinky na novém webu neuvádět."
     },
     "config": {
       "backgroundColor": "bg-black",
@@ -377,7 +606,78 @@ export const SLIDES = [
       "layout": "overlay",
       "overlayOpacity": 0,
       "imageScale": 1,
-      "imageOffsetY": 20
+      "imageOffsetY": 0
+    },
+    "notes": ""
+  },
+  {
+    "id": "mapa-prodejni-mista",
+    "template": "ImageSlide",
+    "content": {
+      "title": "Mapa prodejních míst.",
+      "image": "/images/mapa-czliapor.png",
+      "subtitle": "Uživatelé se občas pokoušejí s mapou interagovat. Na novém webu bude klikatelná a interaktivní."
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "overlay",
+      "overlayOpacity": 0,
+      "imageScale": 1,
+      "imageOffsetY": 0
+    },
+    "notes": ""
+  },
+  {
+    "id": "ke-stazeni",
+    "template": "ImageSlide",
+    "content": {
+      "title": "Ke stažení.",
+      "image": "/images/kestazeni.png",
+      "subtitle": "Nejstahovanější položky umístit výš — blíže uživateli."
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "overlay",
+      "overlayOpacity": 0,
+      "imageScale": 1,
+      "imageOffsetY": 0
+    },
+    "notes": ""
+  },
+  {
+    "id": "hledaji-mutaci",
+    "template": "ImageSlide",
+    "content": {
+      "title": "Jsme tu správně?",
+      "image": "/images/hledajimutaci.png",
+      "subtitle": "Na švýcarském webu klikají na mapu — hledají švýcarskou mutaci. Web jim to neumožňuje snadno najít."
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "overlay",
+      "overlayOpacity": 0,
+      "imageScale": 1,
+      "imageOffsetY": 0
+    },
+    "notes": ""
+  },
+  {
+    "id": "cz-trasa",
+    "template": "ImageSlide",
+    "content": {
+      "title": "Typická trasa uživatele (CZ).",
+      "image": "/images/cztrasa.png",
+      "description": "Produkt → kontakt na stránce\nProdukt → kontakt (stávající zákazník)\nProdukt → kalkulátor\nProdukt → ke stažení"
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "split",
+      "imagePosition": "left",
+      "imageContain": true
     },
     "notes": ""
   },
@@ -480,24 +780,6 @@ export const SLIDES = [
     "notes": "Top 15 nejnavštěvovanějších stránek CZ webu."
   },
   {
-    "id": "hotjar-analyza-de",
-    "template": "ImageSlide",
-    "content": {
-      "image": "/images/hotjar-analyza-de.png",
-      "title": "Víme přesně, kam se dívají. A kde odcházejí.",
-      "subtitle": "(DE)"
-    },
-    "config": {
-      "backgroundColor": "bg-black",
-      "textColor": "text-white",
-      "layout": "overlay",
-      "overlayOpacity": 0,
-      "imageScale": 1,
-      "imageOffsetY": 20
-    },
-    "notes": ""
-  },
-  {
     "id": "rozhovory-zeme",
     "template": "ManifestoSlide",
     "content": {
@@ -531,7 +813,8 @@ export const SLIDES = [
     "config": {
       "backgroundColor": "bg-black",
       "textColor": "text-white",
-      "accentColor": "text-ant-green"
+      "accentColor": "text-ant-green",
+      "accentLine": true
     },
     "notes": ""
   },
