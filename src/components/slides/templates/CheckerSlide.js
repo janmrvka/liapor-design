@@ -78,11 +78,18 @@ export default function CheckerSlide({ slide, content, config = {} }) {
 
         {/* Items/Questions */}
         {items && items.length > 0 && (
-          <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 lg:mb-8">
+          <div className="space-y-6 md:space-y-8 mb-4 md:mb-6 lg:mb-8">
             {items.map((item, index) => (
               <FadeIn key={index} delay={0.7 + index * 0.15}>
-                <p className={`text-xl md:text-3xl lg:text-4xl ${textColor} font-semibold`}>
-                  {item}
+                <p className={`text-xl md:text-3xl lg:text-4xl font-semibold`}>
+                  {item.includes(' — ') ? (
+                    <>
+                      <span className={textColor}>{item.split(' — ')[0]}</span>
+                      <span className={`${textColor} opacity-40`}> — {item.split(' — ').slice(1).join(' — ')}</span>
+                    </>
+                  ) : (
+                    <span className={textColor}>{item}</span>
+                  )}
                 </p>
               </FadeIn>
             ))}

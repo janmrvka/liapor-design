@@ -182,7 +182,7 @@ export const SLIDES = [
     "template": "CheckerSlide",
     "content": {
       "title": "Proč být dohledatelný dnes.",
-      "subtitle": "Analýza 4 500 klíčových slov ukázala, že každý trh funguje jinak.",
+      "subtitle": "",
       "items": [
         "AI přebírá roli prvního poradce — ChatGPT, Gemini, Perplexity doporučují to, co znají. Liapor zatím neznají.",
         "Zákazník si nejdřív hledá řešení online — rozhodnutí padne ještě před prvním kontaktem",
