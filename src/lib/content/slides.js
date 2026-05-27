@@ -100,9 +100,9 @@ export const SLIDES = [
         "Trh a jeho geografická specifika — CZ a DACH",
         "Zákazníky a jejich rozdílné potřeby",
         "Konkurenci a stav odvětví",
-        "Stávající brand a jeho limity",
         "Audit SEO/GEO — jak jsme dohledatelní pro zákazníky",
         "UX audit — jak se zákazníci chovají a kde se ztrácejí",
+        "Stávající brand a jeho limity",
         "Technologické potřeby řešení (CMS) a správa obsahu"
       ],
       "footer": "Každé strategické i designové rozhodnutí v tomto projektu stojí na datech a reálném poznání — ne na dojmech.",
@@ -161,6 +161,138 @@ export const SLIDES = [
       "textColor": "text-white"
     },
     "notes": "Segmenty zákazníků Liapor — každý segment hledá jiné informace."
+  },
+  {
+    "id": "delici-seo-geo",
+    "template": "HeroSlide",
+    "content": {
+      "title": "Nalezitelnost.",
+      "subtitle": "SEO/GEO a obsah jako strategický nástroj růstu."
+    },
+    "config": {
+      "backgroundColor": "bg-ant-yellow",
+      "textColor": "text-black",
+      "accentColor": "text-black",
+      "backgroundVariant": "none"
+    },
+    "notes": ""
+  },
+  {
+    "id": "tri-trhy-analyza",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Proč být dohledatelný dnes.",
+      "subtitle": "Analýza 4 500 klíčových slov ukázala, že každý trh funguje jinak.",
+      "items": [
+        "AI přebírá roli prvního poradce — ChatGPT, Gemini, Perplexity doporučují to, co znají. Liapor zatím neznají.",
+        "Zákazník si nejdřív hledá řešení online — rozhodnutí padne ještě před prvním kontaktem",
+        "Google i AI upřednostňují autoritu — obsah, ne jen produkty",
+        "Teď se láme chleba. Kdo začne dříve, bude mít náskok."
+      ],
+      "footer": "SEO/GEO není technikálie — je to strategický kanál pro akvizici zákazníků.",
+      "highlightFooter": true
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": "Proč je SEO/GEO strategicky důležité — manažerský pohled."
+  },
+  {
+    "id": "kriticke-problemy-seo",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Kritické problémy, které blokují viditelnost.",
+      "subtitle": "Technické chyby, které jsou opravitelné — ale musíme je znát.",
+      "items": [
+        "77 % stránek .com má duplicitní meta title — Google je penalizuje, nedokáže rozlišit obsah",
+        "259 stránek CH — kompletně duplicitní metadata",
+        "Chybí Pillar Pages — klíčové segmenty jsou na pozici ~99 v Googlu",
+        "AI nevidí sub-brandy — LeaFlor, LeaDrain, LeaPerl AI neznají; přitom LeaFlor pokrývá hydroponie (19 000 hledání/měs.), kde AI doporučuje konkurenci"
+      ],
+      "highlightFooter": false
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": "Kritické SEO problémy zjištěné auditem."
+  },
+  {
+    "id": "penize-na-stole",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Peníze na stole.",
+      "subtitle": "Co data ukazují, ale web dosud neadresuje.",
+      "items": [
+        "Hydrokultura / LeaFlor: 19 000 hledání/měs. v DE — AI doporučuje konkurenci, ne nás",
+        "Water Management (filtrace, retence, infiltrace): 4 700 hledání/měs. — na webu neexistuje",
+        "Hotové produkty v DE (Mauerstein, Rasengitterstein): 800–3 000 hledání/měs. — SEO ignoruje",
+        "AI FAQ: strukturované Q&A = přímá cesta do odpovědí ChatGPT, Gemini, Perplexity"
+      ],
+      "footer": "Skvělý podklad pro strategii obsahu pro všechny trhy.",
+      "highlightFooter": true
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": "Příležitosti identifikované SEO auditem."
+  },
+  {
+    "id": "seo-dalsi-kroky",
+    "template": "ManifestoSlide",
+    "content": {
+      "statement": "Domluvit se na jednotném průniku stromové struktury.",
+      "subtitle": "Každá země si pak zapne svoje potřebné.\n\nVidíte nějaké blockery?"
+    },
+    "config": {
+      "backgroundColor": "bg-ant-yellow",
+      "textColor": "text-black",
+      "backgroundVariant": "none"
+    },
+    "notes": "Akční krok + otázka na blockers."
+  },
+  {
+    "id": "seo-linky",
+    "template": "LinksSlide",
+    "content": {
+      "title": "Podklady.",
+      "links": [
+        {
+          "label": "Full AI/SEO audit",
+          "description": "Kompletní audit nalezitelnosti pro DE/EN",
+          "url": "https://www.relevantni.cz/audit/ai-seo-audit-liapor-de-en"
+        },
+        {
+          "label": "Analýza klíčových slov",
+          "description": "4 500 klíčových slov napříč trhy",
+          "url": "https://docs.google.com/spreadsheets/d/1PfqWUBRRpIA0EgR45L_CCj8F6xjvwoLY/edit?gid=377340385#gid=377340385"
+        },
+        {
+          "label": "Stromová struktura CZ",
+          "description": "Návrh struktury webu pro český trh",
+          "url": "https://docs.google.com/spreadsheets/d/1nFBQiMwo7EQVg2nmKHVnaXYEq001IF0Lmw-s6aIYa6Q/edit?gid=2095026485#gid=2095026485"
+        },
+        {
+          "label": "Stromová struktura DE / CH",
+          "description": "Návrh struktury webu pro německý a švýcarský trh",
+          "url": "https://docs.google.com/spreadsheets/d/1moTGzGxCX_g2TQ3SWCJPAj53ErXks-Re/edit?gid=184560933#gid=184560933"
+        }
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green"
+    },
+    "notes": "Odkazy na audity a struktury."
   },
   {
     "id": "product-transformation",
@@ -277,9 +409,9 @@ export const SLIDES = [
     },
     "config": {
       "backgroundColor": "bg-black",
-      "textColor": "text-white"
-    },
-    "notes": "Top 15 nejnavštěvovanějších stránek DE webu tvoří 51 % celkové návštěvnosti."
+      "textColor": "text-white",
+      "colWidths": ["4%", "38%", "38%", "20%"]
+    }
   },
   {
     "id": "nejnavstevovanejsi-stranky-at",
@@ -309,7 +441,8 @@ export const SLIDES = [
     },
     "config": {
       "backgroundColor": "bg-black",
-      "textColor": "text-white"
+      "textColor": "text-white",
+      "colWidths": ["4%", "38%", "38%", "20%"]
     },
     "notes": "Top 15 nejnavštěvovanějších stránek AT webu tvoří 33 % celkové návštěvnosti."
   },
@@ -341,7 +474,8 @@ export const SLIDES = [
     },
     "config": {
       "backgroundColor": "bg-black",
-      "textColor": "text-white"
+      "textColor": "text-white",
+      "colWidths": ["4%", "38%", "38%", "20%"]
     },
     "notes": "Top 15 nejnavštěvovanějších stránek CZ webu."
   },

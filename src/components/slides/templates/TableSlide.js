@@ -11,12 +11,13 @@ export default function TableSlide({ content, config = {} }) {
 
   const { title, subtitle, columns, rows, footer, link } = content;
 
-  // Column widths by count
-  const colWidths = {
+  // Column widths — override via config.colWidths or fall back to defaults
+  const defaultColWidths = {
     3: ['25%', '25%', '50%'],
-    4: ['3%', '40%', '42%', '15%'],
+    4: ['20%', '27%', '27%', '26%'],
+    5: ['14%', '22%', '22%', '22%', '20%'],
   };
-  const widths = colWidths[columns?.length] || null;
+  const widths = config.colWidths || defaultColWidths[columns?.length] || null;
 
   return (
     <div className={`min-h-screen flex flex-col justify-center px-16 md:px-24 py-10 ${backgroundColor}`}>
@@ -30,7 +31,7 @@ export default function TableSlide({ content, config = {} }) {
       )}
       {subtitle && (
         <FadeIn delay={0.2}>
-          <p className={`text-lg md:text-xl ${textColor} opacity-60 mb-6`}>
+          <p className={`text-xl md:text-2xl ${textColor} opacity-60 mb-6`}>
             {subtitle}
           </p>
         </FadeIn>
@@ -38,7 +39,7 @@ export default function TableSlide({ content, config = {} }) {
 
       <FadeIn delay={0.3}>
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-base md:text-lg" style={{ tableLayout: 'fixed' }}>
+          <table className="w-full border-collapse" style={{ tableLayout: 'fixed' }}>
             {widths && (
               <colgroup>
                 {widths.map((w, i) => <col key={i} style={{ width: w }} />)}
@@ -49,7 +50,7 @@ export default function TableSlide({ content, config = {} }) {
                 {columns.map((col, i) => (
                   <th
                     key={i}
-                    className={`text-left py-2 px-2 border-b border-white/20 ${textColor} opacity-50 font-medium uppercase tracking-wider text-xs`}
+                    className={`text-left py-3 px-3 border-b border-white/20 ${textColor} opacity-50 font-semibold uppercase tracking-wider text-sm md:text-base`}
                   >
                     {col}
                   </th>
@@ -68,7 +69,7 @@ export default function TableSlide({ content, config = {} }) {
                   {row.map((cell, ci) => (
                     <td
                       key={ci}
-                      className={`py-2 px-2 ${textColor} ${ci === 0 ? 'font-semibold text-ant-green' : ci === row.length - 1 ? 'font-medium opacity-80' : 'opacity-70'}`}
+                      className={`py-3 px-3 text-lg md:text-xl lg:text-2xl ${textColor} ${ci === 0 ? 'font-bold text-ant-green whitespace-nowrap' : 'font-medium opacity-90'}`}
                     >
                       {cell}
                     </td>
@@ -82,7 +83,7 @@ export default function TableSlide({ content, config = {} }) {
 
       {footer && (
         <FadeIn delay={0.8}>
-          <p className={`mt-6 text-lg md:text-xl font-bold ${textColor} border-t border-white/20 pt-4`}>
+          <p className={`mt-6 text-xl md:text-2xl font-bold ${textColor} border-t border-white/20 pt-4`}>
             → {footer}
           </p>
         </FadeIn>
