@@ -794,6 +794,306 @@ export const SLIDES = [
     "notes": ""
   },
   {
+    "id": "cms-strategy",
+    "template": "HeroSlide",
+    "content": {
+      "title": "Liapor CMS strategie.",
+      "subtitle": "CMS & Digitální strategie 2026–2031."
+    },
+    "config": {
+      "backgroundColor": "bg-ant-yellow",
+      "textColor": "text-black",
+      "accentColor": "text-black",
+      "backgroundVariant": "none"
+    },
+    "notes": ""
+  },
+  {
+    "id": "one-core-one-cms",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Jeden základ. Jedno CMS. Lokální flexibilita.",
+      "items": [
+        "Aktuální stav — 13 evropských regionů, každý vyžaduje lokální specifika při zachování 90 % shody obsahu",
+        "Strategický cíl — technologické jádro s centrální správou, lokální týmy upravují homepage a klíčová menu"
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "technologicky-pristup",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Technologický přístup.",
+      "subtitle": "Proč volíme\nHeadless & React?"
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": ""
+  },
+  {
+    "id": "zaklad-headless-react",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Základ: Headless & React.",
+      "items": [
+        "Frontend (React) — špičková uživatelská zkušenost. Web je extrémně rychlý, interaktivní a připravený na moderní prohlížeče a mobilní zařízení.",
+        "Headless CMS — data (texty, produkty) jsou uložena nezávisle na vzhledu. Stejné informace lze dodat na web, do e-shopu i budoucích aplikací."
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "business-case-autonomie",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Business case: Autonomie & rychlost.",
+      "subtitle": "Navržená technologie nezavírá dveře budoucím potřebám.",
+      "items": [
+        "Uživatelská svoboda — administraci musí zvládnout i \"paní z recepce\" bez asistence programátora.",
+        "Time-to-Market — nové kampaně a podstránky vznikají skládáním hotových bloků. Nasazení obsahu v 13 jazycích se zkracuje z týdnů na hodiny.",
+        "No Vendor Lock-in — Headless architektura odděluje data od vzhledu. Rozhodnete-li se pro jiný design, data zůstávají a nemusí se migrovat."
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "cms-reseni-payload-vs-filament",
+    "template": "TableSlide",
+    "content": {
+      "title": "CMS řešení: Payload vs. Filament.",
+      "columns": ["Vlastnost", "Payload CMS (uživatelsky přívětivější)", "Filament / Antix (robustnější)"],
+      "rows": [
+        ["Editace", "Vizuální editor (Live Preview)", "Formulářová (technická)"],
+        ["Codeless POC", "Skládání sekcí \"naživo\"", "Předdefinovaná struktura"],
+        ["Vhodnost", "Marketingové a obsahové weby", "B2B portály a datové systémy"],
+        ["Flexibilita", "Maximální pro editory", "Maximální pro vývojáře"]
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "colWidths": ["20%", "40%", "40%"]
+    },
+    "notes": ""
+  },
+  {
+    "id": "priprava-na-rust",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Příprava na růst: E-shop & B2B.",
+      "subtitle": "Navržená technologie nezavírá dveře budoucím potřebám.",
+      "items": [
+        "Shoptet — i když je nyní bokem, systém je připraven na budoucí sjednocení produktového katalogu.",
+        "B2B segment — možnost napojení na ERP systémy pro individuální ceníky a objednávky velkoodběratelů.",
+        "Škálování — přidání 14. nebo 15. země je záležitostí dnů, nikoliv měsíců."
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "klicove-otazky-rozhodnuti",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Klíčové otázky pro finální rozhodnutí.",
+      "items": [
+        "Uživatelské role — kdo přesně bude web spravovat? Stačí jednoduchá editace polí, nebo board trvá na vizuálním editoru (Codeless)?",
+        "Jazyk administrace — bude pro administraci 13 zemí stačit angličtina, nebo je vyžadována i němčina a čeština v backendu?",
+        "Budoucnost e-shopu — je v plánu integrace e-shopu přímo do webu v horizontu 2–3 let, nebo zůstane trvale oddělen (externí link)?"
+      ],
+      "footer": "Cíl workshopu: Vyjasnit tyto potřeby pro potvrzení finální technologie.",
+      "highlightFooter": true
+    },
+    "config": {
+      "backgroundColor": "bg-ant-brown",
+      "textColor": "text-black",
+      "accentColor": "text-black",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "roadmapa-2026-2027",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Roadmapa 2026/2027.",
+      "items": [
+        "Workshop — finální vyjasnění potřeb regionálních manažerů.",
+        "Výběr CMS — potvrzení Payload vs. Filament na základě feedbacku.",
+        "MVP Start — spuštění pilotního regionu (CZ/DE) na nové architektuře.",
+        "Roll-out — postupné nasazení zbývajících 11 zemí."
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "domain-strategie-divider",
+    "template": "HeroSlide",
+    "content": {
+      "title": "Strategie domén.",
+      "subtitle": "CMS & Digitální strategie 2026–2031."
+    },
+    "config": {
+      "backgroundColor": "bg-ant-yellow",
+      "textColor": "text-black",
+      "accentColor": "text-black"
+    },
+    "notes": ""
+  },
+  {
+    "id": "domain-strategie-karty",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Strategie domén.",
+      "items": [
+        "liapor.com — Globální & DACH — Ponechat DE, AT a EN. Angličtinu rozšiřovat selektivně (automatický překlad + odborná kontrola). Nedělat plnohodnotnou EN expanzi.",
+        "liapor.com/de — SEO riziko — Nepřesouvat na liapor.de. Riziko ztráty SEO autority při migraci převyšuje přínos. Bezpečnost a správu vyřešíme přes CMS a hosting.",
+        "liapor.ch — Švýcarsko — Ponechat DE + FR. Nepřidávat EN ani IT. Priorita: Ručně rozšířit nejdůležitější francouzské stránky pro region Romandie."
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "domain-strategie-karty-2",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Strategie domén.",
+      "items": [
+        "CZ Satelitní domény — Konsolidace satelitů — Weby typu liastone.cz, liastrop.cz, liadur.cz, zakladani-domu.cz postupně sloučit pod liapor.cz. Podmínkou je příprava precizní redirect mapy, aby nedošlo k propadu pozic.",
+        "liapor.cz — Česká republika — Ponechat pouze češtinu pro hlavní doménu i subdoménu obchod.liapor.cz.",
+        "Oddělený provoz — E-commerce e-shopy — Ponechat e-shopy separátně (obchod.liapor.cz, shop.liapor.ch). Mají jiný uživatelský nákupní záměr než informační weby. Výhled: Možná budoucí konsolidace po konzultaci s českým zastoupením."
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "domain-zaver-board",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Závěr pro Board.",
+      "items": [
+        "Konsolidovat domény — veškerý obsah pod liapor.com, satelity přesměrovat nebo ukončit.",
+        "Zachovat liapor.ch — jediná opodstatněná výjimka, silná lokální autorita.",
+        "Nerozšiřovat bez dat — žádné nové domény nebo subdomény bez tvrdých dat a SEO analýzy.",
+        "Subdoménová strategie — lokální weby jako /de/, /at/, /cz/ v rámci liapor.com."
+      ],
+      "footer": "Držet současné hlavní domény, netříštit autoritu, nerozšiřovat jazyky bez tvrdých dat a investovat primárně do technického zlepšení stávajících webů.",
+      "highlightFooter": true
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "brand-divider",
+    "template": "HeroSlide",
+    "content": {
+      "title": "Brand.",
+      "subtitle": "Vizuální identita a brandová konzistence."
+    },
+    "config": {
+      "backgroundColor": "bg-ant-yellow",
+      "textColor": "text-black",
+      "accentColor": "text-black"
+    },
+    "notes": ""
+  },
+  {
+    "id": "brandova-doporuceni-uvod",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Brandová doporučení.",
+      "subtitle": "Na základě UX a analýzy webu."
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": ""
+  },
+  {
+    "id": "brandova-doporuceni-detail",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Čtyři oblasti ke sjednocení.",
+      "items": [
+        "Typografie — Inter — Přechod na moderní systémové písmo Inter konzistentně napříč všemi trhy a zařízeními.",
+        "Barevný systém — Sjednocení palety s jasnými pravidly použití pro primární, sekundární a akcent barvy.",
+        "Ikonografie — Nahradit nesourodé ikony jednotným systémem s konzistentním stylem a vahou.",
+        "Červená linka — Vizuální prvek, který propojí brand Liapor od produktové stránky až po technickou dokumentaci."
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
     "id": "sumarizace-potreby",
     "template": "CheckerSlide",
     "content": {

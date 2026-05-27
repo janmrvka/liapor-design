@@ -7,9 +7,10 @@ import { ANIMATIONS } from '@/lib/constants';
  * FadeIn - Simple fade-in animation
  * Used for subtle element appearances
  */
-export default function FadeIn({ children, delay = 0, duration = 0.6 }) {
+export default function FadeIn({ children, delay = 0, duration = 0.6, className = '' }) {
   return (
     <motion.div
+      className={className}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{

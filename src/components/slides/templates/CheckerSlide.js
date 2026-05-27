@@ -16,6 +16,7 @@ export default function CheckerSlide({ slide, content, config = {} }) {
     textColor = 'text-white',
     accentColor = 'text-ant-green',
     accentLine = false,
+    itemLayout = 'list',
   } = config;
 
   const { title, subtitle, items, footer, highlightFooter, links, featuredLink } = content;
@@ -23,7 +24,7 @@ export default function CheckerSlide({ slide, content, config = {} }) {
   const isDark = backgroundColor?.includes('black');
 
   return (
-    <div className={`min-h-screen flex items-center justify-center ${backgroundColor} px-4 md:px-8 lg:px-16 py-8 md:py-12 lg:py-16 pb-24 relative overflow-hidden`}>
+    <div className={`min-h-screen flex items-center justify-center ${backgroundColor} px-4 md:px-8 lg:px-16 py-6 md:py-8 lg:py-10 pb-16 relative overflow-hidden`}>
       {/* Subtle background accent */}
       <motion.div
         className={`absolute right-1/4 top-1/4 w-64 h-64 rounded-full opacity-5`}
@@ -69,7 +70,7 @@ export default function CheckerSlide({ slide, content, config = {} }) {
               path="content.subtitle"
               value={subtitle}
               as="p"
-              className={`text-xl md:text-3xl lg:text-4xl ${textColor} opacity-80 mb-6 md:mb-10 lg:mb-14`}
+              className={`text-xl md:text-3xl lg:text-4xl ${textColor} opacity-80 mb-6 md:mb-10 lg:mb-14 whitespace-pre-line`}
             >
               {subtitle}
             </EditableText>
@@ -77,7 +78,24 @@ export default function CheckerSlide({ slide, content, config = {} }) {
         )}
 
         {/* Items/Questions */}
-        {items && items.length > 0 && (
+        {items && items.length > 0 && itemLayout === 'grid' ? (
+          <div className={`grid ${items.length === 3 ? 'grid-cols-3' : items.length === 6 ? 'grid-cols-3' : items.length === 4 ? 'grid-cols-2' : 'grid-cols-2'} gap-4 md:gap-6 mb-4 md:mb-6 lg:mb-8 items-stretch`}>
+            {items.map((item, index) => (
+              <FadeIn key={index} delay={0.7 + index * 0.15} className="h-full">
+                <div className={`border ${isDark ? 'border-white/20' : 'border-black/20'} rounded-xl p-5 md:p-7 text-left h-full`}>
+                  {item.includes(' — ') ? (
+                    <>
+                      <p className={`text-xl md:text-2xl lg:text-3xl font-bold ${textColor} mb-2`}>{item.split(' — ')[0]}</p>
+                      <p className={`text-lg md:text-xl lg:text-2xl ${textColor} opacity-75 font-medium`}>{item.split(' — ').slice(1).join(' — ')}</p>
+                    </>
+                  ) : (
+                    <p className={`text-xl md:text-2xl lg:text-3xl font-semibold ${textColor}`}>{item}</p>
+                  )}
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        ) : items && items.length > 0 && (
           <div className="space-y-6 md:space-y-8 mb-4 md:mb-6 lg:mb-8">
             {items.map((item, index) => (
               <FadeIn key={index} delay={0.7 + index * 0.15}>
