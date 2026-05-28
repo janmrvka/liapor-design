@@ -347,34 +347,11 @@ export const SLIDES = [
     "notes": "Kritické SEO problémy zjištěné auditem."
   },
   {
-    "id": "penize-na-stole",
-    "template": "CheckerSlide",
-    "content": {
-      "title": "Peníze na stole.",
-      "subtitle": "Co data ukazují, ale web dosud neadresuje.",
-      "items": [
-        "Hydrokultura / LeaFlor: 19 000 hledání/měs. v DE — AI doporučuje konkurenci, ne nás",
-        "Water Management (filtrace, retence, infiltrace): 4 700 hledání/měs. — na webu neexistuje",
-        "Hotové produkty v DE (Mauerstein, Rasengitterstein): 800–3 000 hledání/měs. — SEO ignoruje",
-        "AI FAQ: strukturované Q&A = přímá cesta do odpovědí ChatGPT, Gemini, Perplexity"
-      ],
-      "footer": "Skvělý podklad pro strategii obsahu pro všechny trhy.",
-      "highlightFooter": true
-    },
-    "config": {
-      "backgroundColor": "bg-black",
-      "textColor": "text-white",
-      "accentColor": "text-ant-green",
-      "accentLine": true
-    },
-    "notes": "Příležitosti identifikované SEO auditem."
-  },
-  {
     "id": "co-jsme-dodali",
     "template": "CheckerSlide",
     "content": {
       "title": "Co jsme dodali.",
-      "subtitle": "Tři trhy. Tři struktury.",
+      "subtitle": "Různé trhy mají odlišné struktury.",
       "items": [
         "Analýza klíčových slov — 4 485 slov napříč CZ, DE a CH. Clustery, záměry hledání, sezónnost, konkurenční pozice.",
         "Architektura webu — ~250 stránek pro liapor.cz, liapor.de a liapor.ch. URL struktura, interní prolinkování a nová pojmenování stránek — srozumitelná pro zákazníka i pro AI.",
