@@ -1,3 +1,7 @@
+'use client';
+
+import { useRef, useEffect, useState } from 'react';
+
 // Import all slide templates
 import CoverSlide from '@/components/slides/templates/CoverSlide';
 import HeroSlide from '@/components/slides/templates/HeroSlide';
@@ -50,6 +54,48 @@ const SLIDE_TEMPLATES = {
   TableSlide,
 };
 
+function ScaledSlide({ children }) {
+  const outerRef = useRef(null);
+  const innerRef = useRef(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const update = () => {
+      const outer = outerRef.current;
+      const inner = innerRef.current;
+      if (!outer || !inner) return;
+      const availableH = outer.clientHeight;
+      const contentH = inner.scrollHeight;
+      if (contentH > availableH) {
+        setScale(availableH / contentH);
+      } else {
+        setScale(1);
+      }
+    };
+
+    update();
+    const ro = new ResizeObserver(update);
+    if (outerRef.current) ro.observe(outerRef.current);
+    if (innerRef.current) ro.observe(innerRef.current);
+    return () => ro.disconnect();
+  }, [children]);
+
+  return (
+    <div ref={outerRef} style={{ height: '100vh', overflow: 'hidden', display: 'flex', alignItems: 'flex-start' }}>
+      <div
+        ref={innerRef}
+        style={{
+          width: '100%',
+          transformOrigin: 'top center',
+          transform: `scale(${scale})`,
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
 /**
  * SlideRenderer component
  * Dynamically renders the appropriate slide template based on slide.template
@@ -63,7 +109,6 @@ export default function SlideRenderer({ slide }) {
     );
   }
 
-  // Get the template component
   const Template = SLIDE_TEMPLATES[slide.template];
 
   if (!Template) {
@@ -76,6 +121,9 @@ export default function SlideRenderer({ slide }) {
     );
   }
 
-  // Render the template with slide content and config
-  return <Template slide={slide} content={slide.content} config={slide.config} />;
+  return (
+    <ScaledSlide>
+      <Template slide={slide} content={slide.content} config={slide.config} />
+    </ScaledSlide>
+  );
 }
