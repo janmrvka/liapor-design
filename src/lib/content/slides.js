@@ -80,8 +80,8 @@ export const SLIDES = [
     "id": "dnesni-agenda",
     "template": "HeroSlide",
     "content": {
-      "title": "Dnešní agenda.",
-      "subtitle": "Co nás čeká."
+      "title": "Co nás čeká.",
+      "subtitle": ""
     },
     "config": {
       "backgroundColor": "bg-ant-yellow",
@@ -95,15 +95,16 @@ export const SLIDES = [
     "id": "co-jsme-zkoumali",
     "template": "CheckerSlide",
     "content": {
-      "title": "Co jsme zkoumali.",
+      "title": "Agenda.",
       "items": [
-        "Trh a jeho geografická specifika — CZ a DACH",
+        "Trhy a specifika",
         "Zákazníky a jejich rozdílné potřeby",
         "Konkurenci a stav odvětví",
-        "Audit SEO/GEO — jak jsme dohledatelní pro zákazníky",
-        "UX audit — jak se zákazníci chovají a kde se ztrácejí",
+        "Audit SEO/GEO",
+        "UX audit",
         "Stávající brand a jeho limity",
-        "Technologické potřeby řešení (CMS) a správa obsahu"
+        "Technologické potřeby řešení (CMS) a správa obsahu",
+        "UX/UI design — I. draft"
       ],
       "footer": "Každé strategické i designové rozhodnutí v tomto projektu stojí na datech a reálném poznání — ne na dojmech.",
       "highlightFooter": true
@@ -199,20 +200,20 @@ export const SLIDES = [
     "template": "CheckerSlide",
     "content": {
       "title": "Kde hrajeme a s kým.",
-      "subtitle": "Trhy se liší — stejně jako naši konkurenti.",
+      "subtitle": "SEO audit.",
       "items": [
-        "CZ — nejsilnější pozice. Konkurence omezená, přirozený náskok. Hlavní hrozba: nízká digitální viditelnost vlastní značky.",
-        "DE + CH — silnější hřiště. Hlavní soupeř Leca (Saint-Gobain): globální hráč, silný brand, propracovaná digitální přítomnost. Seramis předbíhá ve speciálních aplikacích.",
-        "Všude ztrácíme stejně — produkt je srovnatelný nebo lepší. Prohráváme na viditelnosti v Google a zejména v AI vyhledávačích."
+        "CZ — nejsilnější pozice. Konkurence omezená, přirozený náskok i díky B2C.",
+        "DE/AT/CH — silnější hřiště. Hlavní soupeř Leca (Saint-Gobain): globální hráč, silný brand, propracovaná digitální přítomnost. Seramis předbíhá ve speciálních aplikacích."
       ],
-      "footer": "Neřešíme produktový problém. Řešíme to, že zákazník nás nenajde dřív, než najde konkurenci.",
+      "footer": "Neřešíme produktový problém. Řešíme to, že zákazník nás nenajde dřív, než najde konkurenci v Google nebo AI.",
       "highlightFooter": true
     },
     "config": {
       "backgroundColor": "bg-black",
       "textColor": "text-white",
       "accentColor": "text-ant-green",
-      "accentLine": true
+      "accentLine": true,
+      "itemLayout": "grid"
     },
     "notes": "Konkurenční prostředí — CZ vs DE/CH, hlavní hrozba je viditelnost, ne produkt."
   },
@@ -220,12 +221,12 @@ export const SLIDES = [
     "id": "audit-zacali-daty",
     "template": "CheckerSlide",
     "content": {
-      "title": "Dobrý web nestačí. Musí být i nalezitelný.",
+      "title": "SEO audit.",
       "subtitle": "Než jsme navrhli jedinou stránku, potřebovali jsme data.",
       "items": [
         "Kde jsme? — Reálný stav viditelnosti v Google a AI vyhledávačích",
         "Kde jsou zákazníci? — Co a jak hledají napříč třemi trhy",
-        "Jak to postavit? — Jaká struktura webu přinese největší návratnost"
+        "⚠️ Jak to postavit? — Jaká struktura webu přinese největší návratnost."
       ],
       "footer": "Výsledek není dokument. Je to základ pro stavbu webu.",
       "highlightFooter": true
@@ -234,7 +235,8 @@ export const SLIDES = [
       "backgroundColor": "bg-black",
       "textColor": "text-white",
       "accentColor": "text-ant-green",
-      "accentLine": true
+      "accentLine": true,
+      "itemLayout": "grid"
     },
     "notes": ""
   },
@@ -242,8 +244,8 @@ export const SLIDES = [
     "id": "proc-ux-audit",
     "template": "CheckerSlide",
     "content": {
-      "title": "Víme přesně, co zákazníky zajímá. A co je zdrží.",
-      "subtitle": "UX audit odhalil, kde uživatelé odcházejí — a proč.",
+      "title": "UX audit.",
+      "subtitle": "Víme přesně, co zákazníky zajímá.",
       "items": [
         "Co je zajímá — a kde to na webu nenacházejí",
         "Kde se ztrácejí — stránky, ze kterých odcházejí bez akce",
@@ -256,7 +258,8 @@ export const SLIDES = [
       "backgroundColor": "bg-black",
       "textColor": "text-white",
       "accentColor": "text-ant-green",
-      "accentLine": true
+      "accentLine": true,
+      "itemLayout": "grid"
     },
     "notes": ""
   },
@@ -294,6 +297,29 @@ export const SLIDES = [
       "textColor": "text-white",
       "accentColor": "text-ant-green",
       "accentLine": true
+    },
+    "notes": ""
+  },
+  {
+    "id": "ux-ui-prvni-draft",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "UX/UI design.\nI. draft.",
+      "subtitle": "Ze všech dat jsme navrhli první draft klíčových stránek.",
+      "items": [
+        "Datový základ — každé rozhodnutí o struktuře a obsahu vychází z reálného chování zákazníků, ne z dojmů.",
+        "Prioritizace stránek — identifikovali jsme TOP stránky, které mají největší dopad na konverzi a viditelnost.",
+        "První draft — vizuální návrh klíčových stránek připravený k diskusi a iteraci s týmem Liapor."
+      ],
+      "footer": "Design není o estetice. Je o tom, aby zákazník našel, co hledá — a udělal další krok.",
+      "highlightFooter": true
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
     },
     "notes": ""
   },
@@ -384,11 +410,29 @@ export const SLIDES = [
     "template": "CheckerSlide",
     "content": {
       "title": "Co jsme dodali.",
-      "subtitle": "Tři trhy. Tři struktury. Strategie pro tvorbu obsahu na minimálně 2 roky dopředu.",
+      "subtitle": "Tři trhy. Tři struktury.",
       "items": [
         "Analýza klíčových slov — 4 485 slov napříč CZ, DE a CH. Clustery, záměry hledání, sezónnost, konkurenční pozice.",
-        "Architektura webu — ~250 stránek pro liapor.cz, liapor.de a liapor.ch. URL struktura, interní prolinkování a nová pojmenování stránek — srozumitelná pro zákazníka i pro AI."
+        "Architektura webu — ~250 stránek pro liapor.cz, liapor.de a liapor.ch. URL struktura, interní prolinkování a nová pojmenování stránek — srozumitelná pro zákazníka i pro AI.",
+        "Obsahová strategie — Strategie pro tvorbu obsahu na minimálně 2 roky dopředu."
       ],
+      "highlightFooter": false
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "architektura-navigace",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Navrhujeme sjednotit logické rozdělení.",
+      "subtitle": "Produkty — Aplikace — Reference — Podpora",
       "featuredLink": {
         "label": "Draft struktury webu CZ/DE",
         "url": "https://film-steel-15619116.figma.site/de"
@@ -402,8 +446,7 @@ export const SLIDES = [
           "label": "Stromová struktura DE / CH",
           "url": "https://docs.google.com/spreadsheets/d/1moTGzGxCX_g2TQ3SWCJPAj53ErXks-Re/edit?gid=184560933#gid=184560933"
         }
-      ],
-      "highlightFooter": false
+      ]
     },
     "config": {
       "backgroundColor": "bg-black",
@@ -466,43 +509,6 @@ export const SLIDES = [
       "accentColor": "text-ant-green"
     },
     "notes": "Odkazy na audity a struktury."
-  },
-  {
-    "id": "product-transformation",
-    "template": "LinksSlide",
-    "content": {
-      "title": "Není to revoluce,\nale evoluce.",
-      "subtitle": "Základy pro design.",
-      "links": [
-        {
-          "label": "Liapor Graphic Standards",
-          "url": "/liapor/Liapor_Graphic_Standards.pdf"
-        }
-      ],
-    },
-    "config": {
-      "backgroundColor": "bg-ant-green",
-      "textColor": "text-black",
-      "accentColor": "text-black"
-    },
-    "notes": "Východiska pro návrh designu - brand manuál a grafické standardy Liapor."
-  },
-  {
-    "id": "ai-video-demo",
-    "template": "ImageSlide",
-    "content": {
-      "image": "/images/cilove-skupiny.png",
-      "title": "",
-      "subtitle": ""
-    },
-    "config": {
-      "backgroundColor": "bg-black",
-      "textColor": "text-white",
-      "layout": "overlay",
-      "overlayOpacity": 0,
-      "imageScale": 1
-    },
-    "notes": "Cílové skupiny Liapor."
   },
   {
     "id": "trocha-analytiky",
@@ -1058,6 +1064,26 @@ export const SLIDES = [
     "notes": ""
   },
   {
+    "id": "product-transformation",
+    "template": "LinksSlide",
+    "content": {
+      "title": "Není to revoluce,\nale evoluce.",
+      "subtitle": "Základy pro design.",
+      "links": [
+        {
+          "label": "Liapor Graphic Standards",
+          "url": "/liapor/Liapor_Graphic_Standards.pdf"
+        }
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-ant-green",
+      "textColor": "text-black",
+      "accentColor": "text-black"
+    },
+    "notes": "Východiska pro návrh designu - brand manuál a grafické standardy Liapor."
+  },
+  {
     "id": "brandova-doporuceni-uvod",
     "template": "CheckerSlide",
     "content": {
@@ -1115,6 +1141,20 @@ export const SLIDES = [
       "textColor": "text-white",
       "accentColor": "text-ant-green",
       "accentLine": true
+    },
+    "notes": ""
+  },
+  {
+    "id": "ux-ui-design-divider",
+    "template": "HeroSlide",
+    "content": {
+      "title": "UX/UI Design.",
+      "subtitle": "Návrh uživatelského rozhraní a vizuální identita webu."
+    },
+    "config": {
+      "backgroundColor": "bg-ant-yellow",
+      "textColor": "text-black",
+      "accentColor": "text-black"
     },
     "notes": ""
   },
