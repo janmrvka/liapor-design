@@ -786,6 +786,59 @@ export const SLIDES = [
     "notes": "Top 15 nejnavštěvovanějších stránek CZ webu."
   },
   {
+    "id": "megamenu",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Megamenu.",
+      "subtitle": "Navigace až do 3. úrovně.",
+      "items": [
+        "Až do 3. úrovně — z jakékoliv podstránky se dostanu na jakoukoliv další bez zbytečných kroků.",
+        "Orientace na 1 klik — snadná navigace napříč celým webem bez nutnosti vracet se zpět.",
+        "Současný problém — stávající navigace na webu Liapor toto neumožňuje a zákazníci se ztrácejí."
+      ],
+      "featuredLink": {
+        "label": "Draft struktury webu CZ/DE",
+        "url": "https://film-steel-15619116.figma.site/de"
+      }
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "searchready",
+    "template": "ImageSlide",
+    "content": {
+      "title": "Search ready.",
+      "subtitle": "Snadné hledání na webu.",
+      "images": [
+        {
+          "src": "/images/hledani-web-de.png",
+          "label": "Stávající řešení (DE)"
+        },
+        {
+          "src": "/images/search-ready-1.png",
+          "label": "Ukázka megamenu",
+          "link": {
+            "label": "Ukázka: ivarcs.cz",
+            "url": "https://www.ivarcs.cz/"
+          }
+        }
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "layout": "stack"
+    },
+    "notes": ""
+  },
+  {
     "id": "rozhovory-zeme",
     "template": "ManifestoSlide",
     "content": {
@@ -992,9 +1045,9 @@ export const SLIDES = [
     "content": {
       "title": "Strategie domén.",
       "items": [
-        "liapor.com — Globální & DACH — Ponechat DE, AT a EN. Angličtinu rozšiřovat selektivně (automatický překlad + odborná kontrola). Nedělat plnohodnotnou EN expanzi.",
-        "liapor.com/de — SEO riziko — Nepřesouvat na liapor.de. Riziko ztráty SEO autority při migraci převyšuje přínos. Bezpečnost a správu vyřešíme přes CMS a hosting.",
-        "liapor.ch — Švýcarsko — Ponechat DE + FR. Nepřidávat EN ani IT. Priorita: Ručně rozšířit nejdůležitější francouzské stránky pro region Romandie."
+        "liapor.com — Globální & DACH — Ponechat DE, AT a EN. Ponechat, riziko ztráty SEO autority.",
+        "liapor.com/de — SEO riziko — Nepřesouvat na liapor.de. Riziko ztráty SEO autority při migraci převyšuje přínos.",
+        "liapor.ch — Švýcarsko — Ponechat na současné doméně."
       ]
     },
     "config": {
@@ -1012,7 +1065,7 @@ export const SLIDES = [
     "content": {
       "title": "Strategie domén.",
       "items": [
-        "CZ Satelitní domény — Konsolidace satelitů — Weby typu liastone.cz, liastrop.cz, liadur.cz, zakladani-domu.cz postupně sloučit pod liapor.cz. Podmínkou je příprava precizní redirect mapy, aby nedošlo k propadu pozic.",
+        "CZ Satelitní domény — Neslučovat — Weby typu dumjednimtahem.cz, liastone.cz, liastrop.cz, liadur.cz. Samostatné produkty s velkou autoritou. zakladani-domu.cz, zimni-posyp.cz, liapor-kariera.cz postupně sloučit pod liapor.cz.\n⚠️ Podmínkou je příprava precizní redirect mapy, aby nedošlo k propadu pozic.",
         "liapor.cz — Česká republika — Ponechat pouze češtinu pro hlavní doménu i subdoménu obchod.liapor.cz.",
         "Oddělený provoz — E-commerce e-shopy — Ponechat e-shopy separátně (obchod.liapor.cz, shop.liapor.ch). Mají jiný uživatelský nákupní záměr než informační weby. Výhled: Možná budoucí konsolidace po konzultaci s českým zastoupením."
       ]
@@ -1031,7 +1084,7 @@ export const SLIDES = [
     "template": "CheckerSlide",
     "content": {
       "title": "Závěr pro Board.",
-      "footer": "Držet současné hlavní domény, netříštit autoritu, nerozšiřovat jazyky bez tvrdých dat a investovat primárně do technického zlepšení stávajících webů.",
+      "footer": "Držet současné hlavní domény, netříštit autoritu, nerozšiřovat jazyky bez tvrdých dat a investovat primárně do obsahového a technického zlepšení stávajících webů.",
       "highlightFooter": true
     },
     "config": {
@@ -1096,12 +1149,12 @@ export const SLIDES = [
     "id": "brandova-doporuceni-detail",
     "template": "CheckerSlide",
     "content": {
-      "title": "Čtyři oblasti ke sjednocení.",
+      "title": "Co brand Liaporu postrádá.",
       "items": [
-        "Typografie — Inter — Přechod na moderní systémové písmo Inter konzistentně napříč všemi trhy a zařízeními.",
-        "Barevný systém — Sjednocení palety s jasnými pravidly použití pro primární, sekundární a akcent barvy.",
-        "Ikonografie — Nahradit nesourodé ikony jednotným systémem s konzistentním stylem a vahou.",
-        "Červená linka — Vizuální prvek, který propojí brand Liapor od produktové stránky až po technickou dokumentaci."
+        "Positioning — Není definovaná emoce ani positioning značky.\n\n💡 Produkt Liaporu se používá tam, kde ostatní mají limity. To je příběh. Zatím ho nikdo nevypráví.",
+        "Komunikační linka — Komunikujeme fakta. Ne emoce. Chybí jasná linka, která by propojila všechny kanály a trhy.",
+        "Tone of voice — Chybí pravidla pro jazyk značky. Jak mluvíme? S kým? Jak moc technicky?",
+        "Vizuální jazyk — Chybí pravidla pro fotografii a jasné vizuální atributy pro rozpoznatelnost značky na první pohled."
       ]
     },
     "config": {
@@ -1110,6 +1163,41 @@ export const SLIDES = [
       "accentColor": "text-ant-green",
       "accentLine": true,
       "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "brand-rychle-zmeny",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "Co můžeme změnit hned.",
+      "items": [
+        "Typografie — Inter — Moderní systémové písmo konzistentně napříč všemi trhy a zařízeními.",
+        "Červená linka — Sjednocující vizuální prvek propojující brand od produktové stránky po dokumentaci.",
+        "Barevný systém — Sjednocení palety s jasnými pravidly pro primární, sekundární a akcent barvy.",
+        "Ikonografie — Jednotný systém ikon s konzistentním stylem a vahou."
+      ]
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true,
+      "itemLayout": "grid"
+    },
+    "notes": ""
+  },
+  {
+    "id": "ux-ui-design-divider",
+    "template": "HeroSlide",
+    "content": {
+      "title": "UX/UI Design.",
+      "subtitle": "Návrh uživatelského rozhraní a vizuální identita webu."
+    },
+    "config": {
+      "backgroundColor": "bg-ant-yellow",
+      "textColor": "text-black",
+      "accentColor": "text-black"
     },
     "notes": ""
   },
@@ -1139,16 +1227,38 @@ export const SLIDES = [
     "notes": ""
   },
   {
-    "id": "ux-ui-design-divider",
-    "template": "HeroSlide",
+    "id": "ux-navrhy-odkaz",
+    "template": "CheckerSlide",
     "content": {
-      "title": "UX/UI Design.",
-      "subtitle": "Návrh uživatelského rozhraní a vizuální identita webu."
+      "title": "Tolik dat. Konečně na návrhy.",
+      "featuredLink": {
+        "label": "UX návrhy — wireframes",
+        "url": "https://homepage-alpha-indol-43.vercel.app/wireframes"
+      }
     },
     "config": {
-      "backgroundColor": "bg-ant-yellow",
-      "textColor": "text-black",
-      "accentColor": "text-black"
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
+    },
+    "notes": ""
+  },
+  {
+    "id": "prvni-draft-designu",
+    "template": "CheckerSlide",
+    "content": {
+      "title": "První draft designu.",
+      "featuredLink": {
+        "label": "První draft designu",
+        "url": "https://homepage-alpha-indol-43.vercel.app/"
+      }
+    },
+    "config": {
+      "backgroundColor": "bg-black",
+      "textColor": "text-white",
+      "accentColor": "text-ant-green",
+      "accentLine": true
     },
     "notes": ""
   },
@@ -1156,9 +1266,15 @@ export const SLIDES = [
     "id": "contact-copy",
     "template": "ContactWowSlide",
     "content": {
-      "title": "",
-      "subtitle": "www.antstudio.cz",
-      "clientLogo": "/client/kama-logo.svg"
+      "title": "Thank you.",
+      "subtitle": "Tým (ant)",
+      "clientLogo": "/client/kama-logo.svg",
+      "sticker": {
+        "name": "WOW",
+        "position": "top-right",
+        "rotation": 12,
+        "size": "lg"
+      }
     },
     "config": {
       "backgroundColor": "bg-black",

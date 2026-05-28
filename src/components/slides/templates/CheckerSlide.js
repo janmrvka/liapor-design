@@ -86,7 +86,7 @@ export default function CheckerSlide({ slide, content, config = {} }) {
                   {item.includes(' — ') ? (
                     <>
                       <p className={`text-xl md:text-2xl lg:text-3xl font-bold ${textColor} mb-2`}>{item.split(' — ')[0]}</p>
-                      <p className={`text-lg md:text-xl lg:text-2xl ${textColor} opacity-75 font-medium`}>{item.split(' — ').slice(1).join(' — ')}</p>
+                      <p className={`text-lg md:text-xl lg:text-2xl ${textColor} opacity-75 font-medium whitespace-pre-line`}>{item.split(' — ').slice(1).join(' — ')}</p>
                     </>
                   ) : (
                     <p className={`text-xl md:text-2xl lg:text-3xl font-semibold ${textColor}`}>{item}</p>

@@ -15,7 +15,7 @@ export default function ContactWowSlide({ content, config = {} }) {
     accentColor = 'text-ant-green',
   } = config;
 
-  const { title, subtitle, contactEmail, contactPhone, website } = content;
+  const { title, subtitle, contactEmail, contactPhone, website, sticker } = content;
 
   // Floating particles
   const particles = Array.from({ length: 20 }, (_, i) => ({
@@ -139,13 +139,14 @@ export default function ContactWowSlide({ content, config = {} }) {
         )}
       </div>
 
-      {/* Brand sticker - only top right, bottom left would overlap logo */}
+      {/* Brand sticker */}
       <BrandSticker
-        name="YES"
+        name={sticker?.name || "YES"}
+        text={sticker?.text}
         variant="accent"
-        position="top-right"
-        rotation={15}
-        size="md"
+        position={sticker?.position || "top-right"}
+        rotation={sticker?.rotation ?? 15}
+        size={sticker?.size || "md"}
       />
 
       {/* Animated ring decoration */}

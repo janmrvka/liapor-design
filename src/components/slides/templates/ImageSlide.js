@@ -293,5 +293,60 @@ export default function ImageSlide({ content, config = {} }) {
     );
   }
 
+  // Stack layout - two images stacked vertically
+  if (layout === 'stack') {
+    const { images } = content;
+    return (
+      <div className={`min-h-screen flex flex-col ${backgroundColor} px-8 md:px-16 py-6 md:py-8`}>
+        {title && (
+          <FadeIn delay={0.1}>
+            <h2 className={`text-5xl md:text-7xl lg:text-8xl font-bold ${textColor} mb-2 md:mb-3 text-center`}>
+              {title}
+            </h2>
+            <div className="w-16 md:w-24 lg:w-32 h-0.5 md:h-1 bg-ant-green mb-3 md:mb-4 rounded-full mx-auto" />
+          </FadeIn>
+        )}
+        {subtitle && (
+          <FadeIn delay={0.2}>
+            <p className={`text-xl md:text-2xl ${textColor} opacity-75 mb-4 text-center`}>{subtitle}</p>
+          </FadeIn>
+        )}
+        <div className="flex-1 flex flex-col gap-4 items-center justify-center">
+          {images && images.map((img, i) => (
+            <motion.div
+              key={i}
+              className="w-full flex flex-col items-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 + i * 0.2, ease: 'easeOut' }}
+            >
+              {img.label && (
+                <p className={`text-base md:text-lg font-semibold ${textColor} opacity-60 mb-1 uppercase tracking-wider`}>
+                  {img.label}
+                </p>
+              )}
+              <img
+                src={img.src}
+                alt={img.label || ''}
+                className="max-w-full max-h-[30vh] w-auto object-contain rounded-lg"
+                loading="eager"
+              />
+              {img.link && (
+                <a
+                  href={img.link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-2 text-ant-green text-base md:text-lg font-medium hover:opacity-70 transition-opacity"
+                >
+                  ↗ {img.link.label}
+                </a>
+              )}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return null;
 }
