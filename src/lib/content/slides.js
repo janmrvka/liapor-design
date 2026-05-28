@@ -1031,12 +1031,6 @@ export const SLIDES = [
     "template": "CheckerSlide",
     "content": {
       "title": "Závěr pro Board.",
-      "items": [
-        "Konsolidovat domény — veškerý obsah pod liapor.com, satelity přesměrovat nebo ukončit.",
-        "Zachovat liapor.ch — jediná opodstatněná výjimka, silná lokální autorita.",
-        "Nerozšiřovat bez dat — žádné nové domény nebo subdomény bez tvrdých dat a SEO analýzy.",
-        "Subdoménová strategie — lokální weby jako /de/, /at/, /cz/ v rámci liapor.com."
-      ],
       "footer": "Držet současné hlavní domény, netříštit autoritu, nerozšiřovat jazyky bez tvrdých dat a investovat primárně do technického zlepšení stávajících webů.",
       "highlightFooter": true
     },
